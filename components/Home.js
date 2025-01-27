@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css';
 
+
 import { gsap } from "gsap";
 
 import data from "../public/CV.json";
@@ -8,11 +9,19 @@ import data from "../public/CV.json";
 function Home() {
   return (
     <div>
+      <header className={styles.section}>
+        <h1>{data.user.firstname}{data.user.name}</h1>
+        <h2 >{data.cvTitle}</h2>
+      </header>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          {data.cvTitle}
-        </h1>
-        <p>{data.profil}</p>
+        <section className={styles.section}>
+          <p>{data.profil}</p>
+        </section>
+
+
+        <section className={styles.name}>
+
+        </section>
       </main>
     </div>
   );

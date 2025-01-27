@@ -1,10 +1,23 @@
-.main {
+.section{
   display: flex;
+  width:100vw;
+  height:100vh;
+  
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section--header{
+  background-color: red;
+}
+.main {
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 4rem 0; */
 }
 
 .title {
