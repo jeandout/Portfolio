@@ -1,52 +1,51 @@
 import styles from '../styles/Home.module.css';
 import React from 'react';
-import { useRef } from 'react';
 
 import data from "../public/CV.json";
 
-const { gsap } = require("gsap/dist/gsap");
-const { useGSAP } = require("@gsap/react/dist");
-  
-const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
+const competences = data.competences.items.map((competence, key) => {
+  const lines = competence.skills.map((skill, key) => {
+    return (
+      <li key={key}>{skill}</li>
+    );
+  });
+  return (
+    <div key={key}>
+      <h3>{competence.groupName}</h3>
+      <ul>{lines}</ul>
+    </div>
+  );
+})
 
-
-gsap.registerPlugin(useGSAP,ScrollTrigger);
+const experiences = data.experiences.items.map((experience, key) => {
+  return (
+    <div key={key}>
+      <h3>{experience.title} {experience.company}</h3>
+      <p>{experience.date}</p>
+    </div>
+  );
+})
 
 function Home() {
 
-  const container = useRef();
-
-
-  useGSAP(() => {
-    gsap.defaults({ ease: "none", duration: 2 });
-
-    const t1 = gsap.timeline();
-    t1.from(".bgRed", { xPercent: -100 }).from(".bgBlue", { xPercent: 100 }).from(".bgGreen", { yPercent: -100 });
-
-    ScrollTrigger.create({
-      animation: t1,
-      trigger: container.current,
-      start: "top top",
-      end: "+=4000",
-      scrub: true,
-      pin: true,
-      anticipatePin: 1
-    });
-
-  })
-
   return (
-    <div ref={container} >
-      <header className={`${styles.section} ${styles.bgRed}`}>
+    <div >
+      <header className={`${styles.section}`}>
         <h1>{data.user.firstname} {data.user.name}</h1>
         <h2 >{data.cvTitle}</h2>
+        <p>{data.profil}</p>
       </header>
-      <main >
-        <section className={`${styles.section} ${styles.bgBlue}`}>
-          <p>{data.profil}</p>
+      <main className={`${styles.container}`} >
+        <section className={`${styles.section} `}>
+          <h2>{data.competences.title}</h2>
+          {competences}
         </section>
-        <section className={`${styles.section} ${styles.bgGreen}`}>
-          <p>{data.profil}</p>
+        <section className={`${styles.section} `}>
+        <h2>{data.experiences.title}</h2>
+        {experiences}
+        </section>
+        <section className={`${styles.section} `}>
+
         </section>
       </main>
     </div>
