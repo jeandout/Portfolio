@@ -2,20 +2,33 @@ import styles from '../styles/IDE.module.css';
 import React from 'react';
 
 import data from "../public/CV.json";
+import FolderInNav from '../components/FolderInNav';
 
 const menu = () => {
   return (
     <>
-      <h1>{data.user.firstname} {data.user.name}</h1>
-      <h2 >{data.cvTitle}</h2>
-      <ul>
-        <li>Profil</li>
-        <li>Formations</li>
-        <li>Compétences</li>
-        <li>Expériences</li>
-        <li>Intérêts </li>
-      </ul>
+      <h1>{data.profil.user.firstname} {data.profil.user.name}</h1>
+      <FolderInNav data={data.profil.cvTitle} content={["Profil","Formations","Compétences","Expériences","Intérêts",<FolderInNav 
+            key="sub-folder" 
+            data="Dossier Enfant" 
+            content={["Expériences", "Compétences",]} 
+        />]}/>
     </>
+  )
+}
+
+function File(title, type, items) {
+  return(
+    <div>
+      <h2>{title}</h2>
+      <ul>
+        {items.map((item, key) => {
+          return (
+            <li key={key}>{item}</li>
+          );
+        })}
+      </ul>
+    </div>
   )
 }
 

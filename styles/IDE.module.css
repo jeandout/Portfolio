@@ -17,18 +17,19 @@
 }
 
 .main{
+  display: flex;
   flex-direction: column;
-  border: solid 1px white;
-  padding:4px;
+
   flex-grow: 1;
-  gap : 2px;
+  gap : 4px;
 }
 
 .editor{
   border: solid 1px white;
-  flex-grow: 1;
+  flex-grow: 4;
 }
 
 .console{
   border: solid 1px white;
+  flex-grow: 1;
 }

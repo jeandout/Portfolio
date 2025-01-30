@@ -1,3 +1,24 @@
+/* Reset des marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset des styles de texte */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Suppression des bordures sur les boutons et inputs */
+button, input, textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -21,4 +42,27 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   font-weight: 800;
+}
+
+button{
+  cursor: pointer;
+  color:white;
+}
+.folderInNav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+.folderInNavIcon {
+  width: 20px;
+  height: 20px;
+} 
+.folderInNavContent{
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: solid 1px grey;
+}
+.folderInNavContentItem{
+  
 }
