@@ -72,3 +72,7 @@ button{
   padding-left: 10px;
   border-left: solid 1px grey;
 }
+.selectedFile{
+  color:red;
+  font-weight: 600;
+}

@@ -2,10 +2,9 @@ import { useState } from "react";
 import { MdExpandMore, MdChevronRight } from "react-icons/md";
 
 
-function FolderInNav({ action, data }) {
+function FolderInNav({ action, data, selectedFile}) {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedFile, setSelectedFile] = useState("");
 
     let titles = []; //récupère les titres des fichiers
     for (const key in data) {
@@ -19,14 +18,13 @@ function FolderInNav({ action, data }) {
     }
 
     const clickedFile = (item) => { //action lorsqu'on clique sur un fichier
-        setSelectedFile(item.title);
         action(item);
     }
    
 
     const items = titles.map((item, key) => { //affiche les fichiers et change la couleur de celui selectionné
         return (
-            <button onClick={() => clickedFile(item)} className="folderInNavContentItem" style={item.title == selectedFile ? { "color": "red", "font-weight": "600" } : {}} key={key}>{item.title}</button>
+            <button onClick={() => clickedFile(item)} className={item == selectedFile ? "selectedFile" : "fileItem"} key={key}>{item.title}</button>
         )
     })
 

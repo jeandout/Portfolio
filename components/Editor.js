@@ -4,19 +4,23 @@ import { MdClose } from "react-icons/md";
 
 
 
-function Editor({ openedTabs, action }) {
+function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
 
     const tabs = () => {
 
         return (
             openedTabs.map((data, key) => {
-                return (<div className={styles.tab} key={key}>{data.title}<MdClose onClick={() => close(data)}></MdClose></div>)
+                return (<div className={styles.tab}  key={key}><button className={data == selectedFile ? "selectedFile" : {}} onClick={() => setSelectedFile(data)}>{data.title}</button><MdClose onClick={() => close(data)}></MdClose></div>)
             })
         )
     }
 
+    const editorContent = () => {
+    
+    }
+
     const close = (item) => {
-        action(item);
+        removeTab(item);
     }
 
     return (
