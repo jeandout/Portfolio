@@ -3,59 +3,41 @@ import React from 'react';
 
 import data from "../public/CV.json";
 import FolderInNav from '../components/FolderInNav';
+import Editor from './Editor';
 
-const menu = () => {
-  return (
-    <>
-      <h1>{data.profil.user.firstname} {data.profil.user.name}</h1>
-      <FolderInNav data={data.profil.cvTitle} content={["Profil","Formations","Compétences","Expériences","Intérêts",<FolderInNav 
-            key="sub-folder" 
-            data="Dossier Enfant" 
-            content={["Expériences", "Compétences",]} 
-        />]}/>
-    </>
-  )
-}
+import { useState } from "react";
 
-function File(title, type, items) {
-  return(
-    <div>
-      <h2>{title}</h2>
-      <ul>
-        {items.map((item, key) => {
-          return (
-            <li key={key}>{item}</li>
-          );
-        })}
-      </ul>
-    </div>
-  )
-}
 
 function IDE() {
+
+  const [openTabs, setOpenTabs] = useState([]); //état des onglets ouverts
+  
+  function addTab(item) { //ajoute un nouvel onglet au clic dans le menu
+    if (!openTabs.includes(item)) {
+      setOpenTabs([...openTabs, item]);
+    }
+  }
+
+  function removeTab(item) { //ferme un onglet
+    setOpenTabs(openTabs.filter(tab => tab !== item));
+  }
 
   return (
     <div className={styles.component}>
       <nav className={styles.nav}>
-        {menu()}
+      <h1>{data.profil.user.firstname} {data.profil.user.name}</h1>
+      <FolderInNav
+        action={addTab} //action à effectuer lorsqu'on clique sur un fichier
+        data={data} //données à afficher
+      />
       </nav>
       <main className={styles.main}>
         <section className={styles.editor}>
-          <ul>
-            <li>Profil</li>
-            <li>Formations</li>
-            <li>Compétences</li>
-            <li>Expériences</li>
-            <li>Intérêts </li>
-          </ul>
+          <Editor openedTabs={openTabs} action={removeTab}/>
         </section>
         <section className={styles.console}>
           <ul>
-            <li>Profil</li>
-            <li>Formations</li>
-            <li>Compétences</li>
-            <li>Expériences</li>
-            <li>Intérêts </li>
+            <li>Console</li>
           </ul>
         </section>
       </main>

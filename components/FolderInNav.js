@@ -2,27 +2,39 @@ import { useState } from "react";
 import { MdExpandMore, MdChevronRight } from "react-icons/md";
 
 
-function FolderInNav({ data, content }) {
+function FolderInNav({ action, data }) {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [selectedFile, setSelectedFile] = useState("");
 
-    const handleClick = () => {
-        console.log("click");
+    let titles = []; //récupère les titres des fichiers
+    for (const key in data) {
+        if (data[key].title) {
+            titles.push(data[key]);
+        }
+    }
+
+    const handleClick = () => { //ouvre ou ferme le dossier
         setIsOpen(!isOpen);
     }
 
-    const items = content.map((item, key) => {
+    const clickedFile = (item) => { //action lorsqu'on clique sur un fichier
+        setSelectedFile(item.title);
+        action(item);
+    }
+   
+
+    const items = titles.map((item, key) => { //affiche les fichiers et change la couleur de celui selectionné
         return (
-            <div className="folderInNavContentItem" key={key}>{item}</div>
+            <button onClick={() => clickedFile(item)} className="folderInNavContentItem" style={item.title == selectedFile ? { "color": "red", "font-weight": "600" } : {}} key={key}>{item.title}</button>
         )
     })
-
 
     return (
         <>
             <button role="button" onClick={() => handleClick()} className="folderInNav">
                 {isOpen ? <MdExpandMore className="folderInNavIcon" /> : <MdChevronRight className="folderInNavIcon" />}
-                <h2>{data}</h2>
+                <h3>{data.profil.cvTitle}</h3>
             </button>
             <div className="folderInNavContent">
                 {isOpen && items}
