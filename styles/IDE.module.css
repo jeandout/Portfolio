@@ -3,33 +3,36 @@
   flex-direction: row;
   height: 100vh;
   width: 100vw;
-  flex-wrap: wrap;
-  background-color: black;
-  color:white;
-  border:solid 1px white;
-  padding: 4px;
-  gap:4px;
+  /* flex-wrap: wrap; */
+  background-color: rgb(31, 31, 31);
+  color: white;
+  border: solid 1px rgb(51, 51, 51);
 }
 
-.nav{
-  border: solid 1px white;
-  padding:20px;
-}
-
-.main{
+.nav {
+  border: solid 1px rgb(51, 51, 51);
+  padding: 20px;
   display: flex;
   flex-direction: column;
-
-  flex-grow: 1;
-  gap : 4px;
+  gap: 20px;
+  margin-right: -3px;
 }
 
-.editor{
-  border: solid 1px white;
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: -3px;
+}
+
+.editor {
+  border: solid 1px rgb(51, 51, 51);
   flex-grow: 4;
+  margin-bottom: -3px;
 }
 
-.console{
-  border: solid 1px white;
+.console {
+  border: solid 1px rgb(51, 51, 51);
   flex-grow: 1;
+  margin-top: -3px;
 }

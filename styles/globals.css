@@ -31,20 +31,20 @@ body {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 h2 {
   font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: .8rem;
+  font-size: .7rem;
   margin: 0;
   text-transform: uppercase;
   font-weight: 800;
@@ -52,8 +52,16 @@ h3 {
 
 button{
   cursor: pointer;
-  color:white;
+  color:rgb(201,201,201);
 }
+
+.menuTitle{
+  /* width: 200px; */
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden; /* Cache le texte débordant */
+  text-overflow: ellipsis; /* Ajoute "..." */
+}
+
 .folderInNav {
   display: flex;
   flex-direction: row;
@@ -72,7 +80,66 @@ button{
   padding-left: 10px;
   border-left: solid 1px grey;
 }
+
+
 .selectedFile{
-  color:red;
-  font-weight: 600;
+  color:rgb(51,118,205);
+
+}
+
+.tab {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: solid 1px rgb(37,37,37);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.selectedTab{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: solid 1px rgb(37,37,37);
+  border-top: solid 1px rgb(51,118,205);
+  border-bottom: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: rgb(31,31,31);
+}
+
+.selectedTextTab {
+  color: white;
+}
+
+.editorContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+}
+
+.profilContent{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 30px;
+}
+
+.resizer {
+  width: 6px;
+  z-index: 5;
+  cursor: ew-resize; /* Curseur de redimensionnement */
+}
+
+.resizerH {
+  width: 100%;
+  height:6px;
+  z-index: 5;
+  cursor: row-resize; /* Curseur de redimensionnement */
 }

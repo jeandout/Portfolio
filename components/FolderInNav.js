@@ -29,15 +29,15 @@ function FolderInNav({ action, data, selectedFile}) {
     })
 
     return (
-        <>
-            <button role="button" onClick={() => handleClick()} className="folderInNav">
+        <div>
+            <button  role="button" onClick={() => handleClick()} className="folderInNav">
                 {isOpen ? <MdExpandMore className="folderInNavIcon" /> : <MdChevronRight className="folderInNavIcon" />}
-                <h3>{data.profil.cvTitle}</h3>
+                <h3 className="menuTitle">{data.profil.cvTitle}</h3>
             </button>
             <div className="folderInNavContent">
                 {isOpen && items}
             </div>
-        </>
+        </div>
     )
 }
 
