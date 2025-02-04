@@ -7,10 +7,19 @@ import Editor from './Editor';
 
 import { useState, useRef } from "react";
 
+
 function IDE() {
 
-  const [openTabs, setOpenTabs] = useState([]); //état des onglets ouverts
-  const [selectedFile, setSelectedFile] = useState(""); //
+  const titles = []
+
+  for (const key in data) {
+    if (data[key].title) {
+      titles.push(data[key]);
+    }
+  }
+
+  const [openTabs, setOpenTabs] = useState(titles); //état des onglets ouverts
+  const [selectedFile, setSelectedFile] = useState(openTabs[0]); //
   const [leftWidth, setLeftWidth] = useState(30); // Largeur initiale en %
   const [editorHeight, setEditorHeight] = useState(70); // Largeur initiale en %
 
@@ -32,7 +41,7 @@ function IDE() {
 
     // Calcul de la largeur en pourcentage
     const newWidth = (e.clientX / window.innerWidth) * 100;
-    setLeftWidth(Math.min(80, Math.max(20, newWidth))); // Limite entre 20% et 80%
+    setLeftWidth(Math.min(85, Math.max(15, newWidth))); // Limite entre 20% et 80%
   };
 
   //end of resize
@@ -87,8 +96,8 @@ function IDE() {
       </nav>
       <div className="resizer" onMouseDown={startResizing} />
       <main className={styles.main} style={{ width: `${100 - leftWidth}%` }} onMouseMove={handleMouseMoveH}
-      onMouseUp={stopResizingH}
-      onMouseLeave={stopResizingH}>
+        onMouseUp={stopResizingH}
+        onMouseLeave={stopResizingH}>
         <section className={styles.editor} style={{ height: `${editorHeight}%` }}>
           <Editor openedTabs={openTabs} removeTab={removeTab} selectedFile={selectedFile} setSelectedFile={setSelectedFile} />
         </section>

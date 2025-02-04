@@ -10,6 +10,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   font-family: sans-serif;
   list-style: none;
   text-decoration: none;
+  color:rgb(201,201,201);
 }
 
 /* Suppression des bordures sur les boutons et inputs */
@@ -31,16 +32,18 @@ body {
 }
 
 h1 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: 0;
   text-transform: uppercase;
   font-weight: 200;
+  color:white;
 }
 
 h2 {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 600;
+  color:white;
 }
 
 h3 {
@@ -48,6 +51,7 @@ h3 {
   margin: 0;
   text-transform: uppercase;
   font-weight: 800;
+  color:white;
 }
 
 button{
@@ -111,7 +115,7 @@ button{
 }
 
 .selectedTextTab {
-  color: white;
+  color: rgb(51,118,205);
 }
 
 .editorContent{
@@ -120,6 +124,7 @@ button{
   align-items: center;
   justify-content: center;
   height:100%;
+  background-color: rgb(31,31,31);
 }
 
 .profilContent{

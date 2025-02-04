@@ -10,12 +10,28 @@
     background-color: rgb(24,24,24);
 }
 
-.tab {
+.formationsTab{
+ padding:15px;
+}
+
+.formationsListe{
+    width:100%;
+    height:100%;
     display: flex;
-    gap: 10px;
-    align-items: center;
-    padding: 10px;
-    border: solid 1px rgb(37,37,37);
-    cursor: pointer;
-    text-transform: capitalize;
-  }
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 40px;
+}
+
+.card{
+    display:flex;
+    gap: 15px;
+}
+.years{
+    display:flex;
+    justify-content: flex-end;
+    color:rgb(51,118,205);
+}
+.formation{
+max-width: 600px;
+}
