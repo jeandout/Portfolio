@@ -4,6 +4,7 @@ import React from 'react';
 import data from "../public/CV.json";
 import FolderInNav from '../components/FolderInNav';
 import Editor from './Editor';
+import Console from './Console';
 
 import { useState, useRef } from "react";
 
@@ -103,9 +104,7 @@ function IDE() {
         </section>
         <div className="resizerH" onMouseDown={startResizingH} />
         <section className={styles.console} style={{ height: `${100 - editorHeight}%` }}>
-          <ul>
-            <li>Console</li>
-          </ul>
+            <Console/>
         </section>
       </main>
     </div>

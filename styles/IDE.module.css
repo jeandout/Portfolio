@@ -35,4 +35,8 @@
   border: solid 1px rgb(51, 51, 51);
   flex-grow: 1;
   margin-top: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
 }

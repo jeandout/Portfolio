@@ -30,7 +30,7 @@ function FolderInNav({ action, data, selectedFile}) {
 
     return (
         <div>
-            <button  role="button" onClick={() => handleClick()} className="folderInNav">
+            <button onClick={() => handleClick()} className="folderInNav">
                 {isOpen ? <MdExpandMore className="folderInNavIcon" /> : <MdChevronRight className="folderInNavIcon" />}
                 <h3 className="menuTitle">{data.profil.cvTitle}</h3>
             </button>

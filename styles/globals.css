@@ -148,3 +148,9 @@ button{
   z-index: 5;
   cursor: row-resize; /* Curseur de redimensionnement */
 }
+
+.console{
+  width:100%;
+  height:100%;
+  padding: 10px;
+}
