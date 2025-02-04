@@ -13,7 +13,7 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
 
         return (
             openedTabs.map((data, key) => {
-                return (<div className={data.title == selectedFile ? "selectedTab" : "tab"} key={key}><button style={{ "textTransform": "capitalize" }} className={data == selectedFile ? "selectedTextTab" : {}} onClick={() => setSelectedFile(data)}>{data.title} </button><MdClose onClick={() => close(data)}></MdClose></div>)
+                return (<div className={data == selectedFile ? "selectedTab" : "tab"} key={key}><button style={{ "textTransform": "capitalize" }} className={data == selectedFile ? "selectedTextTab" : {}} onClick={() => setSelectedFile(data)}>{data.title} </button><MdClose onClick={() => close(data)}></MdClose></div>)
             })
         )
     }
@@ -27,19 +27,19 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                 case '🤵🏼‍♂️ profil':
                     return (
                         <div className='profilContent'>
-                            <h1>
-                                {selectedFile.user.firstname} {selectedFile.user.name}
-                            </h1>
+                            <div style={{"flex-grow":"1", "width":"100%", "textAlign":"right", "display":"flex", "flexDirection":"column", "justifyContent":"space-between", "height":"100%"}} >
+                                <h1 >
+                                    {selectedFile.user.firstname} {selectedFile.user.name}
+                                </h1>
 
-                            <h2>
-                                {selectedFile.cvTitle}
-                            </h2>
-                            <p>
+                                <h2>
+                                    {selectedFile.cvTitle}
+                                </h2>
+                            </div>
+
+                            <p style={{"flex-grow":"1", "width":"100%"}}>
                                 {selectedFile.resume}
                             </p>
-                            <div className='contact'>
-                                contact
-                            </div>
                         </div>
                     );
                 case '🎓 formations':
@@ -119,7 +119,7 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                             {/* <h1 style={{ "paddingBottom": "20px", "textAlign": "center" }}>
                                 {selectedFile.title}
                             </h1> */}
-                            <div className={styles.formationsListe} style={{"alignItems":"center"}}>
+                            <div className={styles.formationsListe} style={{ "alignItems": "center" }}>
                                 {selectedFile.items.map((xp, key) => {
                                     return (
                                         <div className={styles.card}>
@@ -131,18 +131,19 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                             </div>
                         </div>
                     );
-                    case '🔎 intérêts':
+                case '🔎 intérêts':
                     return (
                         <div className={styles.formationsTab}>
                             {/* <h1 style={{ "paddingBottom": "20px", "textAlign": "center" }}>
                                 {selectedFile.title}
                             </h1> */}
-                            <div className={styles.formationsListe} style={{"alignItems":"center"}}>
+                            <div className={styles.formationsListe} style={{ "alignItems": "center" }}>
                                 {selectedFile.items.map((xp, key) => {
                                     return (
-                                       <p key={key}>{xp}</p>
-                                    
-                                    )})}
+                                        <p key={key}>{xp}</p>
+
+                                    )
+                                })}
                             </div>
                         </div>
                     );
