@@ -163,3 +163,8 @@ button{
   background-color: rgb(51,118,205);
   padding: 10px;
 }
+
+.mobileContent{
+  background-color: rgb(31,31,31);
+  height: 100vh;
+}

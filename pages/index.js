@@ -1,9 +1,12 @@
-import Home from '../components/Home';
 import IDE from '../components/IDE';
-import ScrollTriggerTest from '../components/ScrollTriggerTest';
+import MobileView from '../components/MobileView'
+import { useMediaQuery } from 'react-responsive';
 
 function Index() {
-  return <IDE />;
+  const isMobile = useMediaQuery({ maxWidth: 940 });
+  return (<>
+  {isMobile ? <MobileView/> : <IDE />}
+  </>)
 }
 
 export default Index;

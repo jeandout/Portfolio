@@ -2,6 +2,7 @@ import styles from '../styles/Editor.module.css';
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import Image from 'next/image';
+import ProfilPic from '../components/ProfilPic';
 
 
 
@@ -23,21 +24,28 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
             switch (selectedFile.title) {
                 case '🤵🏼‍♂️ profil':
                     return (
-                        <div className='profilContent'>
-                            <div style={{ "flexGrow": "1", "width": "100%", "textAlign": "right", "display": "flex", "flexDirection": "column", "justifyContent": "space-between", "height": "100%" }} >
-                                <h1 >
-                                    {selectedFile.user.firstname} {selectedFile.user.name}
-                                </h1>
+                        <>
+                            
+                            <div className='profilContent'>
+                            {ProfilPic(selectedFile.profilPic)}
 
-                                <h2 style={{ "marginBottom": "0rem" }}>
-                                    {selectedFile.cvTitle}
-                                </h2>
+                                <div style={{ "width": "100%", "textAlign": "left", "display": "flex", "flexDirection": "column", "justifyContent": "flex-end", "height": "100%", "gap":"15px" }} >
+                                    <h1 >
+                                        {selectedFile.user.firstname} {selectedFile.user.name}
+                                    </h1>
+
+                                    <h2 style={{ "marginBottom": "0rem" }}>
+                                        {selectedFile.cvTitle}
+                                    </h2>
+                                    <p style={{ "width": "100%" }}>
+                                    {selectedFile.resume}
+                                </p>
+                                </div>
+
+                                
                             </div>
+                        </>
 
-                            <p style={{ "flexGrow": "1", "width": "100%" }}>
-                                {selectedFile.resume}
-                            </p>
-                        </div>
                     );
                 case '🎓 formations':
                     return (
@@ -133,7 +141,7 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                                 {selectedFile.items.map((xp, key) => {
                                     return (
                                         <div key={key} className={styles.card}>
-                                            <p  className={styles.years}>{xp.date}</p>
+                                            <p className={styles.years}>{xp.date}</p>
                                             <h2> {xp.company}</h2>
                                         </div>
                                     )
