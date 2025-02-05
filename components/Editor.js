@@ -13,31 +13,28 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
 
         return (
             openedTabs.map((data, key) => {
-                return (<div className={data == selectedFile ? "selectedTab" : "tab"} key={key}><button style={{ "textTransform": "capitalize" }} className={data == selectedFile ? "selectedTextTab" : {}} onClick={() => setSelectedFile(data)}>{data.title} </button><MdClose onClick={() => close(data)}></MdClose></div>)
+                return (<button onClick={() => setSelectedFile(data)} className={data == selectedFile ? "selectedTab" : "tab"} key={key}><div style={{ "textTransform": "capitalize" }} className={data == selectedFile ? "selectedTextTab" : {}} >{data.title} </div><MdClose onClick={() => close(data)}></MdClose></button>)
             })
         )
     }
 
-
     const editorContent = () => {
-
-
         if (selectedFile) {
             switch (selectedFile.title) {
                 case '🤵🏼‍♂️ profil':
                     return (
                         <div className='profilContent'>
-                            <div style={{"flex-grow":"1", "width":"100%", "textAlign":"right", "display":"flex", "flexDirection":"column", "justifyContent":"space-between", "height":"100%"}} >
+                            <div style={{ "flexGrow": "1", "width": "100%", "textAlign": "right", "display": "flex", "flexDirection": "column", "justifyContent": "space-between", "height": "100%" }} >
                                 <h1 >
                                     {selectedFile.user.firstname} {selectedFile.user.name}
                                 </h1>
 
-                                <h2>
+                                <h2 style={{ "marginBottom": "0rem" }}>
                                     {selectedFile.cvTitle}
                                 </h2>
                             </div>
 
-                            <p style={{"flex-grow":"1", "width":"100%"}}>
+                            <p style={{ "flexGrow": "1", "width": "100%" }}>
                                 {selectedFile.resume}
                             </p>
                         </div>
@@ -51,10 +48,10 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                             <div className={styles.formationsListe}>
                                 {selectedFile.items.map((item, key) => {
                                     return (
-                                        <div className={styles.card}>
+                                        <div key={key} className={styles.card}>
                                             <p className={styles.years}>{item.date}</p>
                                             <div className={styles.formation}>
-                                                <h2 key={key}>{item.title}</h2>
+                                                <h2 >{item.title}</h2>
                                                 <p>{item.school}</p>
                                             </div>
                                         </div>
@@ -73,13 +70,13 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                             <div className={styles.formationsListe}>
                                 {selectedFile.items.map((item, key) => {
                                     return (
-                                        <div>
-                                            <h2 key={key}>{item.title}</h2>
-                                            <p>{item.skills.map((skill, key) => {
+                                        <div key={key}>
+                                            <h2 >{item.title}</h2>
+                                            <div>{item.skills.map((skill, key) => {
                                                 return (
                                                     <p key={key}>{skill}</p>
                                                 )
-                                            })}</p>
+                                            })}</div>
                                         </div>
                                     )
                                 })}
@@ -95,16 +92,29 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                             <div className={styles.formationsListe}>
                                 {selectedFile.items.map((item, key) => {
                                     return (
-                                        <div className={styles.card}>
+                                        <div key={key} className={styles.card}>
                                             <p className={styles.years}>{item.date}</p>
                                             <div className={styles.formation}>
-                                                <h2 key={key}>{item.title}</h2>
+                                                <h2 >{item.title}</h2>
                                                 <p style={{ "color": "white", "textTransform": "uppercase" }}>{item.company}</p>
-                                                <p>{item.description.map((point, key) => {
+                                                <div>{item.description.map((desc, key) => {
                                                     return (
-                                                        <p key={key}>{point}</p>
+                                                        <p key={key}>{desc}</p>
                                                     )
-                                                })}</p>
+                                                })}</div>
+                                                {item.projects && (
+                                                    <>
+                                                        <p>Projets notables :</p>
+                                                        <ul>
+                                                            {item.projects.map((project, key) => {
+                                                                return (
+                                                                    <li key={key} style={{ "listStyleType": "disc", "marginLeft": "15px" }} >{project}</li>
+                                                                )
+                                                            }
+                                                            )}
+                                                        </ul>
+                                                    </>
+                                                )}
                                             </div>
                                         </div>
                                     )
@@ -122,8 +132,8 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                             <div className={styles.formationsListe} style={{ "alignItems": "center" }}>
                                 {selectedFile.items.map((xp, key) => {
                                     return (
-                                        <div className={styles.card}>
-                                            <p key={key} className={styles.years}>{xp.date}</p>
+                                        <div key={key} className={styles.card}>
+                                            <p  className={styles.years}>{xp.date}</p>
                                             <h2> {xp.company}</h2>
                                         </div>
                                     )

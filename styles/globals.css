@@ -37,6 +37,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 200;
   color:white;
+  
 }
 
 h2 {
@@ -44,6 +45,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 600;
   color:white;
+  margin-bottom: .5rem;
 }
 
 h3 {
@@ -108,7 +110,7 @@ button{
   padding: 10px;
   border: solid 1px rgb(37,37,37);
   border-top: solid 1px rgb(51,118,205);
-  border-bottom: none;
+  border-bottom:  solid 1px transparent;
   cursor: pointer;
   text-transform: capitalize;
   background-color: rgb(31,31,31);
