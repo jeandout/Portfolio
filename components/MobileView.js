@@ -32,11 +32,9 @@ function MobileView() {
 
     return (
         <div className="mobileContent">
-            <nav>
-                <h1>{dataList[0].user.firstname} {dataList[0].user.name}</h1>
-            </nav>
-            <main>
-            </main>
+          
+                {/* <h1>{dataList[0].user.firstname} {dataList[0].user.name}</h1> */}
+        <p>Ce site n'est disponible que sur écran supérieur à 960px</p>
         </div>
     )
 

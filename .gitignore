@@ -31,7 +31,4 @@ yarn-error.log*
 # vercel
 .vercel
 
-#perso
-CV.json
-
 .env.local
