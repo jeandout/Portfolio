@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "dotenv": "^16.4.7",
     "gsap": "^3.12.7",
     "next": "12.1.6",
     "react": "18.1.0",

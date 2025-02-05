@@ -34,4 +34,4 @@ yarn-error.log*
 #perso
 CV.json
 
-.env
+.env.local

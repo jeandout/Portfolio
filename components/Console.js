@@ -1,5 +1,5 @@
 import { useState } from 'react';
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 
 function Console() {
@@ -7,8 +7,9 @@ function Console() {
     const [message, setMessage] = useState('');
 
     const handleClick = async () => {
+ 
         try {
-            const response = await fetch(API_URL, {
+            const response = await fetch(`${API_URL}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -41,5 +42,7 @@ function Console() {
             <button className="sendButton" style={{ "zIndex": "10", "position": "absolute", "bottom": "10px", "right": "10px" }} onClick={() => handleClick()}>Envoyer</button>
         </div>
     )
+    
 }
+
 export default Console;
