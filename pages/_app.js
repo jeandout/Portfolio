@@ -8,7 +8,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Next.js App</title>
+        <title>Jean DOUTREBENTE - Dev</title>
       </Head>
       <Component {...pageProps} />
     </>

@@ -8,7 +8,6 @@ import Console from './Console';
 
 import { useState, useRef } from "react";
 
-
 function IDE() {
 
   const titles = []
@@ -69,6 +68,12 @@ function IDE() {
 
   //end of resize
 
+  function openLink(item) {
+    console.log(item.link)
+    window.open(item.link, "_blank", "noopener,noreferrer");
+
+  }
+
   function addTab(item) { //ajoute un nouvel onglet au clic dans le menu
     if (!openTabs.includes(item)) {
       setOpenTabs([...openTabs, item]);
@@ -91,9 +96,17 @@ function IDE() {
         <h1>{data.profil.user.firstname} {data.profil.user.name}</h1>
         <FolderInNav
           action={addTab} //action à effectuer lorsqu'on clique sur un fichier
-          data={data} //données à afficher
+          titles={titles} //tableau de données à afficher
           selectedFile={selectedFile} // fichier mis en avant
+          name={data.profil.cvTitle}
         />
+        <FolderInNav
+          action={openLink} //action à effectuer lorsqu'on clique sur un fichier
+          titles={[{"title":"GitHub", "link":"https://github.com/jeandout/"}, {"title":"LinkedIn", "link":"https://www.linkedin.com/in/jean-doutrebente-732884203/"}]} //tableau de données à afficher
+          selectedFile={selectedFile} // fichier mis en avant
+          name="Mes réseaux"
+        />
+      
       </nav>
       <div className="resizer" onMouseDown={startResizing} />
       <main className={styles.main} style={{ width: `${100 - leftWidth}%` }} onMouseMove={handleMouseMoveH}

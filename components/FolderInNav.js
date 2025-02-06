@@ -2,16 +2,10 @@ import { useState } from "react";
 import { MdExpandMore, MdChevronRight } from "react-icons/md";
 
 
-function FolderInNav({ action, data, selectedFile}) {
+function FolderInNav({ action, titles, selectedFile, name}) {
 
     const [isOpen, setIsOpen] = useState(true);
 
-    let titles = []; //récupère les titres des fichiers
-    for (const key in data) {
-        if (data[key].title) {
-            titles.push(data[key]);
-        }
-    }
 
     const handleClick = () => { //ouvre ou ferme le dossier
         setIsOpen(!isOpen);
@@ -32,7 +26,7 @@ function FolderInNav({ action, data, selectedFile}) {
         <div>
             <button onClick={() => handleClick()} className="folderInNav">
                 {isOpen ? <MdExpandMore className="folderInNavIcon" /> : <MdChevronRight className="folderInNavIcon" />}
-                <h3 className="menuTitle">{data.profil.cvTitle}</h3>
+                <h3 className="menuTitle">{name}</h3>
             </button>
             <div className="folderInNavContent">
                 {isOpen && items}

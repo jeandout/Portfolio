@@ -25,11 +25,11 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                 case '🤵🏼‍♂️ profil':
                     return (
                         <>
-                            
-                            <div className='profilContent'>
-                            {ProfilPic(selectedFile.profilPic)}
 
-                                <div style={{ "width": "100%", "textAlign": "left", "display": "flex", "flexDirection": "column", "justifyContent": "flex-end", "height": "100%", "gap":"15px" }} >
+                            <div className='profilContent'>
+                                {ProfilPic(selectedFile.profilPic)}
+
+                                <div style={{ "width": "100%", "textAlign": "left", "display": "flex", "flexDirection": "column", "justifyContent": "flex-end", "height": "100%", "gap": "15px" }} >
                                     <h1 >
                                         {selectedFile.user.firstname} {selectedFile.user.name}
                                     </h1>
@@ -38,11 +38,11 @@ function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
                                         {selectedFile.cvTitle}
                                     </h2>
                                     <p style={{ "width": "100%" }}>
-                                    {selectedFile.resume}
-                                </p>
+                                        {selectedFile.resume}
+                                    </p>
                                 </div>
 
-                                
+
                             </div>
                         </>
 
