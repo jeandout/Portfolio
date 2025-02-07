@@ -84,6 +84,8 @@ function IDE() {
   function removeTab(item) { //ferme un onglet
     setOpenTabs(openTabs.filter(tab => tab !== item));
     setSelectedFile(openTabs.filter(tab => tab !== item).at(-1))//selectionne le dernier objet de la liste des onglet ouvert
+    console.log(openTabs.filter(tab => tab !== item).at(-1))
+    console.log(selectedFile)
   }
 
   return (
@@ -102,22 +104,26 @@ function IDE() {
         />
         <FolderInNav
           action={openLink} //action à effectuer lorsqu'on clique sur un fichier
-          titles={[{"title":"GitHub", "link":"https://github.com/jeandout/"}, {"title":"LinkedIn", "link":"https://www.linkedin.com/in/jean-doutrebente-732884203/"}]} //tableau de données à afficher
+          titles={[{ "title": "GitHub", "link": "https://github.com/jeandout/" }, { "title": "LinkedIn", "link": "https://www.linkedin.com/in/jean-doutrebente-732884203/" }]} //tableau de données à afficher
           selectedFile={selectedFile} // fichier mis en avant
           name="Mes réseaux"
         />
-      
+
       </nav>
       <div className="resizer" onMouseDown={startResizing} />
       <main className={styles.main} style={{ width: `${100 - leftWidth}%` }} onMouseMove={handleMouseMoveH}
         onMouseUp={stopResizingH}
         onMouseLeave={stopResizingH}>
         <section className={styles.editor} style={{ height: `${editorHeight}%` }}>
-          <Editor openedTabs={openTabs} removeTab={removeTab} selectedFile={selectedFile} setSelectedFile={setSelectedFile} />
+          <Editor
+            openTabs={openTabs}
+            removeTab={removeTab}
+            selectedFile={selectedFile}
+            setSelectedFile={setSelectedFile} />
         </section>
         <div className="resizerH" onMouseDown={startResizingH} />
         <section className={styles.console} style={{ height: `${100 - editorHeight}%` }}>
-            <Console/>
+          <Console />
         </section>
       </main>
     </div>

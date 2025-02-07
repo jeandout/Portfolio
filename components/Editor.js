@@ -7,13 +7,13 @@ import ProfilPic from '../components/ProfilPic';
 
 
 
-function Editor({ openedTabs, removeTab, selectedFile, setSelectedFile }) {
+function Editor({ openTabs, removeTab, selectedFile, setSelectedFile }) {
 
 
     const tabs = () => {
 
         return (
-            openedTabs.map((data, key) => {
+            openTabs.map((data, key) => {
                 return (<button onClick={() => setSelectedFile(data)} className={data == selectedFile ? "selectedTab" : "tab"} key={key}><div style={{ "textTransform": "capitalize" }} className={data == selectedFile ? "selectedTextTab" : {}} >{data.title} </div><MdClose onClick={() => close(data)}></MdClose></button>)
             })
         )

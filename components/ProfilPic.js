@@ -6,7 +6,7 @@ function ProfilPic(image) {
         
         <div >
             {image.map((line, key) => {
-                return (<p style={{"fontWeight":"800","fontSize":"5px", "fontFamily":"monospace","color":"black", "lineHeight":"5px"}} key={key}>{line}</p>)
+                return (<p style={{"fontWeight":"800","fontSize":"8px", "fontFamily":"monospace","color":"rgb(0, 0, 0)", "lineHeight":"8px"}} key={key}>{line}</p>)
             })}
         </div>
     )
