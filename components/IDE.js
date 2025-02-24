@@ -1,12 +1,11 @@
 import styles from '../styles/IDE.module.css';
 import React from 'react';
-
 import data from "../public/CV.json";
 import FolderInNav from '../components/FolderInNav';
 import Editor from './Editor';
 import Console from './Console';
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function IDE() {
 
@@ -23,7 +22,12 @@ function IDE() {
   const [leftWidth, setLeftWidth] = useState(30); // Largeur initiale en %
   const [editorHeight, setEditorHeight] = useState(70); // Largeur initiale en %
 
-
+  useEffect(() => {
+    if (!openTabs.includes(selectedFile)) {
+      setSelectedFile(openTabs.at(-1) || null);
+    }
+  }, [openTabs]); // Se déclenche à chaque mise à jour de `openTabs`
+  
   //Gestion du resize des éléments horizontaux
 
   const isResizing = useRef(false);
@@ -81,12 +85,7 @@ function IDE() {
     setSelectedFile(item);
   }
 
-  function removeTab(item) { //ferme un onglet
-    setOpenTabs(openTabs.filter(tab => tab !== item));
-    setSelectedFile(openTabs.filter(tab => tab !== item).at(-1))//selectionne le dernier objet de la liste des onglet ouvert
-    console.log(openTabs.filter(tab => tab !== item).at(-1))
-    console.log(selectedFile)
-  }
+
 
   return (
     <div className={styles.component}
@@ -117,8 +116,8 @@ function IDE() {
         <section className={styles.editor} style={{ height: `${editorHeight}%` }}>
           <Editor
             openTabs={openTabs}
-            removeTab={removeTab}
             selectedFile={selectedFile}
+            setOpenTabs={setOpenTabs}
             setSelectedFile={setSelectedFile} />
         </section>
         <div className="resizerH" onMouseDown={startResizingH} />
