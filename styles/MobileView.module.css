@@ -1,0 +1,9 @@
+.mobileContent{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    min-height: 100vh;
+    background-color: rgb(31,31,31);
+  }
