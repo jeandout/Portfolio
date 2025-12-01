@@ -1,6 +1,6 @@
 {
     "profil": {
-        "profilPic":[
+        "profilPic": [
             ".....................................................................................................",
             ".....................................................................................................",
             ".....................................................................................................",
@@ -56,8 +56,7 @@
             ":::.......................:..x.:.....:$++;::......:::;xX$X...........................................",
             "::.........................::+:;.......+;;;:::::::::+XX$:....;++;....................................",
             "::..........................:::;........;;+::::::;+x$X:.....:......:;:..............................."
-          ],
-          
+        ],
         "title": "🤵🏼‍♂️ profil",
         "user": {
             "name": "Doutrebente",
@@ -69,7 +68,7 @@
             "phone": "+33 6 32 03 17 86",
             "adress": "Paris"
         },
-        "resume": "Après un diplome de designer d’interaction et sept ans d’activité comme designer et chef de projet, je recherche un CDI comme Développeur web full stack spécialisé en JavaScript, pour mettre à profit mes compétences en React, NodeJS et MongoDB."
+        "resume": "Développeur expérimenté et complet, j'ai une spécialisation dans le développement d'applications web et mobile. Après plus de 7 ans à travailler sur l'ensemble de la chaîne de valeur des projets de développements applicatifs, j'intègre rapidement l'ensemble des besoins depuis le respect du design demandé jusqu'à l'implémentation des fonctionnalités et la performance des traitements."
     },
     "formations": {
         "title": "🎓 formations",
@@ -92,6 +91,15 @@
         "title": "🛠️ compétences",
         "items": [
             {
+                "title": "design",
+                "skills": [
+                    "Figma / Adobe XD",
+                    "Photoshop / Illustrator / Indesign / After Effects / Premiere Pro",
+                    "Processing / Arduino",
+                    "SolidWorks / 2dsMax / Keyshot"
+                ]
+            },
+            {
                 "title": "développement",
                 "skills": [
                     "HTML 5 / CSS / JavaScript",
@@ -100,15 +108,6 @@
                     "MongoDB / Mongoose",
                     "React Native",
                     "Vercel / Git / Github / TDD"
-                ]
-            },
-            {
-                "title": "design",
-                "skills": [
-                    "Figma / Adobe XD",
-                    "Photoshop / Illustrator / Indesign / After Effects / Premiere Pro",
-                    "Processing / Arduino",
-                    "SolidWorks / 2dsMax / Keyshot"
                 ]
             },
             {
@@ -127,7 +126,13 @@
                 "title": "Designer UX - Chef de projet fonctionnel",
                 "company": "Dynames IT",
                 "description": [
-                    "Supervision de l'ensemble des fonctions de gestion de projet et de design UX/UI (planification, conception, développement et livraison)."
+                    "Supervision de l'ensemble des fonctions de gestion de projet et de design UX/UI (planification, conception, développement et livraison).",
+                    "Développement en équipe. Choix des architectures techniques, des langages et des modes de développement adaptés aux projets.",
+                    "Gestion des tests unitaires. Gestion des tests fonctionnels et des processus de validation demandés.",
+                    "Intégration des tests automatisés CI/CD selon les chaînes d'intégration mises en place pour les différents projets clients.",
+                    "Capacité forte à discuter directement avec les clients pour les phases de finalisation et de mise en production.",
+                    "Coordination avec les chefs de projet pour prise en compte des besoins et planification des développements.",
+                    "Synthèse et suivi des avancements, respect des charge"
                 ],
                 "projects": [
                     "PRETORIO (Angular) : Plateforme SAAS dédiée aux avocats spécialisés en droit social.",
