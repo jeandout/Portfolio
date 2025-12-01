@@ -1,0 +1,181 @@
+.mobileContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  /* VS Code Editor Background */
+  color: #d4d4d4;
+  /* VS Code Default Text */
+  gap: 30px;
+}
+
+.section {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profilSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.profilSection h1 {
+  color: #569cd6;
+  /* VS Code Blue (Keywords) */
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.profilSection h2 {
+  color: #dcdcaa;
+  /* VS Code Yellow (Functions) */
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.profilSection p {
+  color: #ce9178;
+  /* VS Code Orange (Strings) */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #c586c0;
+  /* VS Code Purple (Control Flow) */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 3px solid #c586c0;
+  padding-left: 10px;
+}
+
+.card {
+  background-color: #252526;
+  /* VS Code Sidebar Background */
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-color: #007acc;
+}
+
+.years {
+  color: #858585;
+  /* VS Code Comment Color */
+  font-size: 0.85rem;
+  text-align: right;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.formation h2,
+.experience h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #9cdcfe;
+  /* VS Code Light Blue (Variables) */
+}
+
+.company {
+  color: #4ec9b0;
+  /* VS Code Teal (Types) */
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillItem {
+  background-color: #3c3c3c;
+  color: #d4d4d4;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: 1px solid #444;
+}
+
+.projectList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+.projectList li::before {
+  content: "•";
+  color: #569cd6;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.footer {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background-color: transparent;
+  width: 100%;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  pointer-events: none;
+  /* Allow clicking through the empty space */
+}
+
+.footerLink {
+  pointer-events: auto;
+  /* Re-enable clicks on buttons */
+  background-color: #007acc;
+  /* VS Code Status Bar Blue */
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  flex: 1;
+  max-width: 200px;
+}
+
+.footerLink:hover {
+  text-decoration: none;
+  background-color: #005a9e;
+}
+
+.footerLink:active {
+  transform: scale(0.98);
+}
