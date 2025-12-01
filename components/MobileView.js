@@ -79,7 +79,7 @@ function MobileView() {
 
             {/* Footer */}
             <footer className={styles.footer}>
-                <a href="https://github.com/jeandout/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>GitHub</a>
+                {/* <a href="https://github.com/jeandout/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>GitHub</a> */}
                 <a href="https://www.linkedin.com/in/jean-doutrebente-732884203/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>LinkedIn</a>
             </footer>
 
