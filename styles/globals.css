@@ -154,7 +154,7 @@ button {
 .profilContent {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   gap: 15px;
   padding: 30px;

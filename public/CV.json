@@ -68,7 +68,13 @@
             "phone": "+33 6 32 03 17 86",
             "adress": "Paris"
         },
-        "resume": "Développeur expérimenté et complet, j'ai une spécialisation dans le développement d'applications web et mobile. Après plus de 7 ans à travailler sur l'ensemble de la chaîne de valeur des projets de développements applicatifs, j'intègre rapidement l'ensemble des besoins depuis le respect du design demandé jusqu'à l'implémentation des fonctionnalités et la performance des traitements."
+        "resume": [
+            "Développeur Fullstack / Frontend disponible à Paris et ses environs. ",
+            "Après 7 ans d’expérience en gestion de projet et conception d’interfaces utilisateur, j’ai choisi de me spécialiser dans le développement web et mobile. ",
+            "Diplômé du titre professionnel de Développeur d’application web et mobile (formation intensive à La Capsule), je suis aujourd’hui opérationnel sur des technologies modernes telles que React, Node.js et JavaScript. ",
+            "Mon parcours en UX/UI et en gestion de projet me donne une approche unique : je conçois des solutions qui sont à la fois techniquement solides et centrées sur l’utilisateur. ",
+            "🔎 Je suis actuellement à la recherche d’un nouveau défi en tant que Développeur Fullstack ou Frontend à Paris, et je serais ravi d’échanger avec vous sur de potentielles opportunités ! "
+        ]
     },
     "formations": {
         "title": "🎓 formations",

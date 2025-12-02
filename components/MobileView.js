@@ -1,6 +1,5 @@
 import data from "../public/CV.json";
 import styles from '../styles/MobileView.module.css';
-import ProfilPic from '../components/ProfilPic';
 
 function MobileView() {
 
@@ -17,7 +16,9 @@ function MobileView() {
             <section className={`${styles.section} ${styles.profilSection}`}>
                 <h2>{profil.user.firstname} {profil.user.name}</h2>
                 <h1>{profil.cvTitle}</h1>
-                <p>{profil.resume}</p>
+                <div>{profil.resume.map((item, key) => (
+                    <p style={{ textAlign: "left", marginBottom: "1rem" }} key={key}>{item}</p>
+                ))}</div>
             </section>
 
             {/* Competences Section */}

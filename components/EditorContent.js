@@ -9,7 +9,7 @@ import ProfilPic from '../components/ProfilPic';
 
 function EditorContent({ openTabs, setOpenTabs, selectedFile, setSelectedFile }) {
 
-  
+
 
     const editorContent = () => {
         if (selectedFile) {
@@ -29,9 +29,11 @@ function EditorContent({ openTabs, setOpenTabs, selectedFile, setSelectedFile })
                                     <h2 style={{ "marginBottom": "0rem" }}>
                                         {selectedFile.cvTitle}
                                     </h2>
-                                    <p style={{ "width": "100%" }}>
-                                        {selectedFile.resume}
-                                    </p>
+                                    <div style={{ "width": "100%" }}>
+                                        {selectedFile.resume.map((item, key) => (
+                                            <p style={{ "marginBottom": "1rem" }} key={key}>{item}</p>
+                                        ))}
+                                    </div>
                                 </div>
 
 
@@ -170,14 +172,14 @@ function EditorContent({ openTabs, setOpenTabs, selectedFile, setSelectedFile })
 
     }
 
-    
+
 
     return (
-        
-            <div className="editorContent"  >
-                {editorContent()}
-            </div>
-    
+
+        <div className="editorContent"  >
+            {editorContent()}
+        </div>
+
     )
 }
 
