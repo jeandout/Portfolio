@@ -1,21 +1,16 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { useCVPopup } from '../components/site/CVPopupContext';
+import styles from '../styles/CVPage.module.css';
 
 const MobileView = dynamic(() => import('../components/MobileView'), { ssr: false });
+const IDE = dynamic(() => import('../components/IDE'), { ssr: false });
 
 function CV() {
   const [mounted, setMounted] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 940 });
-  const { isDesktop, openCvPopup } = useCVPopup();
 
   useEffect(() => setMounted(true), []);
-
-  useEffect(() => {
-    if (!mounted || !isDesktop) return;
-    openCvPopup();
-  }, [mounted, isDesktop, openCvPopup]);
 
   if (!mounted) return null;
 
@@ -30,13 +25,18 @@ function CV() {
   }
 
   return (
-    <section className="section">
-      <div className="container">
-        <h1>CV</h1>
-        <p>La version desktop du CV s&apos;ouvre dans une fenetre superposee.</p>
-        <button type="button" onClick={openCvPopup}>
-          Ouvrir le CV
-        </button>
+    <section className={styles.page}>
+      <div className={styles.desktopMockup}>
+        <div className={styles.windowBar}>
+          <span className={`${styles.windowDot} ${styles.dotRed}`} />
+          <span className={`${styles.windowDot} ${styles.dotYellow}`} />
+          <span className={`${styles.windowDot} ${styles.dotGreen}`} />
+        </div>
+        <div className={styles.windowContent}>
+          <div className="ide-root">
+            <IDE />
+          </div>
+        </div>
       </div>
     </section>
   );

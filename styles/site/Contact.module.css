@@ -60,27 +60,6 @@
   min-height: 180px;
 }
 
-.submitButton {
-  margin-top: 8px;
-  min-height: 48px;
-  border: 1px solid var(--accent);
-  border-radius: var(--radius);
-  background: var(--accent);
-  color: #ffffff;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.submitButton:hover:not(:disabled) {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-}
-
-.submitButton:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
 .statusMessage {
   margin-top: 6px;
   font-size: var(--font-size-sm);

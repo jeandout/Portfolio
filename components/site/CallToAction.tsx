@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import styles from '../../styles/site/Home.module.css';
+import Button from './Button';
 
 interface CallToActionTexts {
   title: string;
@@ -54,9 +54,9 @@ export default function CallToAction({ texts }: CallToActionProps) {
         <p className={styles.ctaSubtitle} data-cta-animate>
           {texts.subtitle}
         </p>
-        <Link href="/contact" className={styles.primaryButton} data-cta-animate>
+        <Button href="/contact" data-cta-animate>
           {texts.button}
-        </Link>
+        </Button>
       </div>
     </section>
   );

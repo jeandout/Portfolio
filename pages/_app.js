@@ -3,8 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';
 import Layout from '../components/site/Layout';
-import CVDesktopPopup from '../components/site/CVDesktopPopup';
-import { CVPopupContext } from '../components/site/CVPopupContext';
+import { ThemeContext } from '../components/site/ThemeContext';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeandoutrebente.vercel.app';
 const KEYWORDS = 'UX, UI, design, développement, prototypage, freelance, Paris';
@@ -33,42 +32,46 @@ const PAGE_META = {
   '/cv': DEFAULT_META
 };
 
-const DESKTOP_BREAKPOINT = 940;
+const THEME_STORAGE_KEY = 'site-theme';
+
+const getPreferredTheme = () => {
+  if (typeof window === 'undefined') return 'dark';
+
+  const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+  if (storedTheme === 'light' || storedTheme === 'dark') {
+    return storedTheme;
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
 
 function App({ Component, pageProps }) {
   const router = useRouter();
   const meta = PAGE_META[router.pathname] ?? DEFAULT_META;
   const pageUrl = `${SITE_URL}${router.pathname === '/' ? '' : router.pathname}`;
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isCvPopupOpen, setIsCvPopupOpen] = useState(false);
-
-  const openCvPopup = useCallback(() => setIsCvPopupOpen(true), []);
-  const closeCvPopup = useCallback(() => setIsCvPopupOpen(false), []);
+  const [theme, setTheme] = useState('dark');
+  const [isThemeReady, setIsThemeReady] = useState(false);
 
   useEffect(() => {
-    const updateViewport = () => {
-      const desktop = window.innerWidth > DESKTOP_BREAKPOINT;
-      setIsDesktop(desktop);
-
-      if (!desktop) {
-        setIsCvPopupOpen(false);
-      }
-    };
-
-    updateViewport();
-    window.addEventListener('resize', updateViewport);
-    return () => window.removeEventListener('resize', updateViewport);
+    const preferredTheme = getPreferredTheme();
+    setTheme(preferredTheme);
+    document.documentElement.setAttribute('data-theme', preferredTheme);
+    setIsThemeReady(true);
   }, []);
 
-  useEffect(() => {
-    setIsCvPopupOpen(false);
-  }, [router.pathname]);
+  const toggleTheme = useCallback(() => {
+    setTheme((previousTheme) => {
+      const nextTheme = previousTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      return nextTheme;
+    });
+  }, []);
 
-  const cvPopupContextValue = {
-    isDesktop,
-    isCvPopupOpen,
-    openCvPopup,
-    closeCvPopup
+  const themeContextValue = {
+    theme,
+    isThemeReady,
+    toggleTheme
   };
 
   return (
@@ -95,12 +98,11 @@ function App({ Component, pageProps }) {
         <meta property="twitter:image" content={`${SITE_URL}/favicon.ico`} />
       </Head>
 
-      <CVPopupContext.Provider value={cvPopupContextValue}>
+      <ThemeContext.Provider value={themeContextValue}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        {isDesktop ? <CVDesktopPopup isOpen={isCvPopupOpen} onClose={closeCvPopup} /> : null}
-      </CVPopupContext.Provider>
+      </ThemeContext.Provider>
     </>
   );
 }

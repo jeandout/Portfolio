@@ -29,3 +29,14 @@
   --transition: 0.3s ease;
   --transition-slow: 0.6s ease;
 }
+
+:root[data-theme='light'] {
+  --bg-primary: #f7f9fc;
+  --bg-secondary: #ffffff;
+  --bg-elevated: #eef2f7;
+  --border: rgba(20, 31, 49, 0.14);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --accent: #4f6d8f;
+  --accent-hover: #3f5a78;
+}

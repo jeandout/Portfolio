@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import gsap from 'gsap';
 import styles from '../../styles/site/Home.module.css';
+import Button from './Button';
 
 interface HeroTexts {
   title: string;
@@ -41,12 +41,12 @@ export default function Hero({ texts }: HeroProps) {
         <p className={`${styles.heroSubtitle} hero-animate`}>{texts.subtitle}</p>
         <p className={`${styles.heroDescription} hero-animate`}>{texts.description}</p>
         <div className={`${styles.heroActions} hero-animate`}>
-          <Link href="/contact" className={styles.primaryButton}>
+          <Button href="/contact">
             {texts.cta_primary}
-          </Link>
-          <Link href="/accompagnement" className={styles.secondaryButton}>
+          </Button>
+          <Button href="/accompagnement" variant="secondary">
             {texts.cta_secondary}
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

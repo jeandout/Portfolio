@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import styles from '../../styles/site/Layout.module.css';
+import ThemeToggle from './ThemeToggle';
 
 export default function Footer() {
   return (
@@ -25,6 +27,12 @@ export default function Footer() {
             GitHub
           </a>
         </nav>
+        <div className={styles.footerControls}>
+          <ThemeToggle />
+          <Link href="/cv" className={styles.footerVersionLink}>
+            V1
+          </Link>
+        </div>
         <p className={styles.footerCopy}>© 2026 Jean Doutrebente</p>
       </div>
     </footer>

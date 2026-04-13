@@ -44,39 +44,6 @@
   margin-top: 36px;
 }
 
-.primaryButton,
-.secondaryButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius);
-  font-weight: 600;
-  transition: var(--transition);
-  min-height: 48px;
-  padding: 12px 24px;
-}
-
-.primaryButton {
-  background: var(--accent);
-  color: #ffffff;
-  border: 1px solid var(--accent);
-}
-
-.primaryButton:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-}
-
-.secondaryButton {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-.secondaryButton:hover {
-  background: var(--accent);
-  color: #ffffff;
-}
-
 .services {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);

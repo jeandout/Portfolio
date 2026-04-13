@@ -1,5 +1,6 @@
 import { FormEvent, useMemo, useState } from 'react';
 import styles from '../../styles/site/Contact.module.css';
+import Button from './Button';
 
 interface ContactFormTexts {
   name: string;
@@ -123,9 +124,9 @@ export default function ContactForm({ texts }: ContactFormProps) {
         required
       />
 
-      <button className={styles.submitButton} type="submit" disabled={status === 'loading'}>
+      <Button type="submit" disabled={status === 'loading'} fullWidth>
         {status === 'loading' ? 'Envoi...' : texts.submit}
-      </button>
+      </Button>
 
       {statusMessage ? (
         <p className={`${styles.statusMessage} ${styles[`status${statusMessage.kind[0].toUpperCase()}${statusMessage.kind.slice(1)}`]}`}>

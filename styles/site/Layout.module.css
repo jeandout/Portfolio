@@ -28,7 +28,7 @@
 .headerInner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 72px;
 }
 
@@ -66,24 +66,100 @@
   color: var(--text-primary);
 }
 
-/* CTA bouton */
-.ctaBtn {
+.themeToggle {
+  position: relative;
   display: inline-flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: var(--accent);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  border-radius: var(--radius);
-  transition: background-color var(--transition), transform var(--transition);
-  white-space: nowrap;
+  width: 64px;
+  height: 34px;
+  padding: 4px 5px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  transition: border-color var(--transition), background-color var(--transition);
 }
 
-.ctaBtn:hover {
-  background-color: var(--accent-hover);
-  transform: translateY(-1px);
+.themeToggle:hover {
+  border-color: var(--accent);
+}
+
+.themeToggleLight {
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg-elevated));
+}
+
+.themeIconSun,
+.themeIconMoon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeIconSun svg,
+.themeIconMoon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.themeIconSun svg {
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.themeIconMoon svg {
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.themeThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+  transition: transform var(--transition), background-color var(--transition), border-color var(--transition);
+}
+
+.themeToggleLight .themeThumb {
+  transform: translateX(30px);
+}
+
+.themeThumbSun,
+.themeThumbMoon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeThumbSun svg,
+.themeThumbMoon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.themeThumbSun svg {
+  fill: var(--accent);
+  stroke: var(--accent);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.themeThumbMoon svg {
+  fill: var(--accent);
 }
 
 /* ─── Hamburger mobile ───────────────────────────────────── */
@@ -154,8 +230,11 @@
 
 .mobileCtaBtn {
   margin-top: 8px;
-  font-size: var(--font-size-base);
-  padding: 14px 28px;
+  min-width: 180px;
+}
+
+.nav {
+  margin-left: auto;
 }
 
 /* ─── Footer ─────────────────────────────────────────────── */
@@ -198,6 +277,26 @@
 .footerCopy {
   font-size: var(--font-size-sm);
   color: var(--text-secondary);
+}
+
+.footerControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footerVersionLink {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: 0.55;
+  transition: opacity var(--transition), color var(--transition);
+}
+
+.footerVersionLink:hover {
+  color: var(--text-primary);
+  opacity: 0.85;
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */

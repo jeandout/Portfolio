@@ -14,6 +14,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 /* Headings — reset simple, police héritée de body (Inter)   */
