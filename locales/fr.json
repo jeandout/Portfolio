@@ -1,0 +1,132 @@
+{
+  "site": {
+    "name": "Jean Doutrebente",
+    "title": "Designer & Développeur",
+    "tagline": "Je simplifie la vie de vos utilisateurs."
+  },
+  "hero": {
+    "title": "Jean Doutrebente",
+    "subtitle": "Je simplifie la vie de vos utilisateurs.",
+    "description": "Designer et développeur, j'accompagne les entreprises de l'identification du problème utilisateur jusqu'au prototype fonctionnel. Une approche pragmatique, centrée sur vos utilisateurs.",
+    "cta_primary": "Parlons de votre projet",
+    "cta_secondary": "Comment je travaille"
+  },
+  "services": {
+    "title": "Ce que je fais",
+    "items": [
+      {
+        "title": "Comprendre",
+        "description": "Audit UX, recherche utilisateur, entretiens. J'identifie les vrais problèmes avant de chercher des solutions.",
+        "icon": "search"
+      },
+      {
+        "title": "Concevoir",
+        "description": "Wireframes, architecture fonctionnelle, prototypes. Je structure l'expérience pour qu'elle soit claire et efficace.",
+        "icon": "pencil"
+      },
+      {
+        "title": "Développer",
+        "description": "Prototypes fonctionnels, applications web et mobile. Je code ce que je conçois — pas de perte en traduction.",
+        "icon": "code"
+      }
+    ],
+    "note": "Je peux aussi vous orienter vers des solutions existantes si elles répondent mieux à votre besoin."
+  },
+  "process_teaser": {
+    "title": "Un projet, étape par étape",
+    "steps": [
+      "Échange",
+      "Problématique",
+      "Recherche",
+      "Benchmark",
+      "Solutions",
+      "Wireframes",
+      "Prototype",
+      "Livraison"
+    ],
+    "cta": "Voir le détail de mon accompagnement"
+  },
+  "about": {
+    "title": "Qui suis-je",
+    "text": "7 ans d'expérience en design UX et gestion de projet, complétés par une formation intensive en développement web et mobile. Mon profil hybride me permet de penser un produit de bout en bout : de la compréhension du besoin utilisateur jusqu'à sa mise en production.",
+    "cta": "Voir mon parcours complet"
+  },
+  "cta_final": {
+    "title": "Un projet ? Une idée ?",
+    "subtitle": "Discutons-en.",
+    "button": "Me contacter"
+  },
+  "accompagnement": {
+    "title": "Comment je travaille",
+    "subtitle": "Chaque projet suit un parcours adapté, étape par étape.",
+    "steps": [
+      {
+        "title": "Échange initial",
+        "description": "On discute de votre contexte, vos objectifs, vos contraintes. L'idée est de comprendre votre situation avant tout."
+      },
+      {
+        "title": "Identification de la problématique",
+        "description": "Je reformule le problème réel à résoudre. Souvent, la vraie difficulté n'est pas celle qu'on imagine au départ."
+      },
+      {
+        "title": "Recherche utilisateur",
+        "description": "Entretiens, observations, personas. Je vais à la rencontre de vos utilisateurs pour comprendre leurs besoins réels."
+      },
+      {
+        "title": "Cartographie d'expérience",
+        "description": "Je cartographie les parcours, identifie les points de friction et les opportunités d'amélioration."
+      },
+      {
+        "title": "Benchmark",
+        "description": "Analyse de l'existant et des solutions du marché. Ce qui fonctionne ailleurs peut inspirer ou être directement recommandé."
+      },
+      {
+        "title": "Exploration de solutions",
+        "description": "Idéation et priorisation. Je propose des pistes concrètes, y compris des outils existants si c'est plus pertinent."
+      },
+      {
+        "title": "Wireframes & Architecture",
+        "description": "Arborescence fonctionnelle et maquettes fil de fer. La structure avant l'habillage."
+      },
+      {
+        "title": "Prototypage",
+        "description": "Prototype fonctionnel et interactif, en code. Pas un mockup statique, un outil testable."
+      },
+      {
+        "title": "Itération & livraison",
+        "description": "Tests utilisateur, ajustements, mise en production par blocs fonctionnels. On avance de manière pragmatique."
+      }
+    ],
+    "cta": "Prêt à démarrer ?"
+  },
+  "contact": {
+    "title": "Discutons de votre projet",
+    "subtitle": "Un formulaire, un cafe, un appel - comme vous preferez.",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message",
+      "submit": "Envoyer",
+      "success": "Message envoye ! Je reviens vers vous rapidement.",
+      "error": "Une erreur est survenue. Reessayez ou contactez-moi directement."
+    },
+    "booking": {
+      "title": "Preferez un rendez-vous ?",
+      "description": "Reservez un creneau de 30 minutes pour discuter de votre projet.",
+      "button": "Prendre rendez-vous",
+      "url": "https://calendar.app.google/dCKbTzLquza371pW8"
+    },
+    "info": {
+      "email": "jeandout@hotmail.fr",
+      "linkedin": "https://www.linkedin.com/in/jean-doutrebente-732884203/"
+    }
+  },
+  "nav": {
+    "accompagnement": "Accompagnement",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "footer": {
+    "copyright": "© 2026 Jean Doutrebente"
+  }
+}

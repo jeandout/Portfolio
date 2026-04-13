@@ -10,7 +10,7 @@ Données CV: `public/CV.json` — source unique pour `/cv` uniquement
 
 Tokens dans `styles/design-tokens.css`
 Palette dark premium: bg `#0a0a0a`, secondary `#141414`, accent bleu acier `#6b8aad`, hover `#8ba5c4`
-Typo: Comfortaa (titres 600/700) + Inter (corps 400/16px)
+Typo: Oxanium (titres 600/700) + Inter (corps 400/16px)
 WCAG AA minimum partout
 
 ## Conventions

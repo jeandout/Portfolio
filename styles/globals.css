@@ -17,7 +17,7 @@ body {
 }
 
 /* Headings — reset simple, police héritée de body (Inter)   */
-/* Comfortaa appliqué via SiteLayout à l'étape 2             */
+/* Oxanium appliqué via SiteLayout à l'étape 2               */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
@@ -38,6 +38,26 @@ input, textarea { border: none; outline: none; background: none; }
 
 .section {
   padding: var(--section-padding) 0;
+}
+
+@media (max-width: 940px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 88px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
 }
 
 /* ─── Legacy IDE — scoped sous .ide-root ────────────────── */

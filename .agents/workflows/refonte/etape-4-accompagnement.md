@@ -33,8 +33,8 @@ Créer `components/site/Timeline.tsx`:
 - Props: `steps: Array<{title: string, description: string}>`
 - Timeline verticale: ligne de connexion 2px `--border` au centre (desktop) ou à gauche (mobile)
 - Chaque étape:
-  - Pastille ronde 48px avec numéro, fond `--accent`, texte blanc, Comfortaa 700
-  - Titre h3 Comfortaa `--text-primary`
+  - Pastille ronde 48px avec numéro, fond `--accent`, texte blanc, Oxanium 700
+  - Titre h3 Oxanium `--text-primary`
   - Description p Inter `--text-secondary`
 - Desktop: alternance gauche/droite (étapes impaires à gauche, paires à droite)
 - Mobile (< 940px): tout à droite de la ligne
@@ -66,7 +66,7 @@ export default function Accompagnement() {
 
 Créer `styles/site/Accompagnement.module.css`:
 - `.page`: padding-top pour compenser le header sticky
-- `.pageHeader`: centré, titre Comfortaa `--font-size-3xl`, sous-titre `--text-secondary`, margin-bottom large
+- `.pageHeader`: centré, titre Oxanium `--font-size-3xl`, sous-titre `--text-secondary`, margin-bottom large
 
 ## Vérification
 

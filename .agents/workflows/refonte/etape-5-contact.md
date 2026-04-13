@@ -65,7 +65,7 @@ Créer `pages/contact.tsx`:
   - Bloc RDV (titre, description, bouton)
   - Séparateur
   - Infos directes: email (lien mailto), LinkedIn (lien externe)
-- Titre de page: h1 Comfortaa centré au-dessus des colonnes
+- Titre de page: h1 Oxanium centré au-dessus des colonnes
 - Sous-titre: `--text-secondary`
 
 Créer `styles/site/Contact.module.css`:

@@ -19,7 +19,7 @@ Vérifier que les fichiers `.js` existants continuent de fonctionner.
 Créer `styles/design-tokens.css`:
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   --bg-primary: #0a0a0a;
@@ -31,7 +31,7 @@ Créer `styles/design-tokens.css`:
   --accent: #6b8aad;
   --accent-hover: #8ba5c4;
 
-  --font-heading: 'Comfortaa', cursive;
+  --font-heading: 'Oxanium', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-size-base: 16px;
   --font-size-sm: 14px;
@@ -73,4 +73,4 @@ NEXT_PUBLIC_SITE_URL=https://jeandoutrebente.vercel.app
 - `yarn dev` démarre sans erreur
 - `/` (page actuelle IDE) fonctionne toujours identiquement
 - `:root` dans le navigateur contient les tokens CSS (DevTools → Computed)
-- Comfortaa et Inter chargées (onglet Network → Fonts)
+- Oxanium et Inter chargées (onglet Network → Fonts)

@@ -17,7 +17,7 @@ Créer `components/site/Layout.tsx`:
 
 **Header** (`components/site/Header.tsx`):
 - Sticky top, fond transparent → `--bg-primary` au scroll (state `scrolled` via useEffect scroll listener)
-- Gauche: "Jean Doutrebente" en Comfortaa, lien vers `/`
+- Gauche: "Jean Doutrebente" en Oxanium, lien vers `/`
 - Droite: liens nav — Accompagnement (`/accompagnement`), Contact (`/contact`), CV (`/cv`)
 - CTA bouton: "Parlons de votre projet" → `/contact` (filled, --accent)
 - Mobile (< 940px): hamburger menu, nav en overlay plein écran

@@ -1,13 +1,18 @@
-import styles from '../styles/site/Home.module.css';
+import Hero from '../components/site/Hero';
+import Services from '../components/site/Services';
+import ProcessTeaser from '../components/site/ProcessTeaser';
+import About from '../components/site/About';
+import CallToAction from '../components/site/CallToAction';
+import texts from '../locales/fr.json';
 
 export default function Home() {
   return (
-    <section className={styles.placeholder}>
-      <div className="container">
-        <h1 className={styles.title}>Site en construction</h1>
-        <p className={styles.sub}>La page d'accueil arrive à l'étape 3.</p>
-        <div className={styles.dot} />
-      </div>
-    </section>
+    <>
+      <Hero texts={texts.hero} />
+      <Services texts={texts.services} />
+      <ProcessTeaser texts={texts.process_teaser} />
+      <About texts={texts.about} />
+      <CallToAction texts={texts.cta_final} />
+    </>
   );
 }

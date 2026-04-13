@@ -75,7 +75,7 @@ Créer dans `components/site/` + `styles/site/Home.module.css`:
 
 **Hero.tsx**
 - Fond: gradient radial subtil depuis `--accent` à ~5% opacité
-- Titre h1 Comfortaa: `--font-size-4xl` desktop, `--font-size-2xl` mobile
+- Titre h1 Oxanium: `--font-size-4xl` desktop, `--font-size-2xl` mobile
 - Sous-titre Inter: `--text-secondary`
 - Description: `--text-secondary`, max-width 600px
 - Bouton primaire: filled `--accent`, texte blanc, hover `--accent-hover`
@@ -84,7 +84,7 @@ Créer dans `components/site/` + `styles/site/Home.module.css`:
 - Section min-height ~80vh, flex centré
 
 **Services.tsx**
-- Titre h2 Comfortaa centré
+- Titre h2 Oxanium centré
 - Grille CSS: 3 colonnes desktop (`repeat(3, 1fr)`), 1 colonne mobile
 - Cards: padding 32px, border `--border`, border-radius `--radius-lg`, bg `--bg-secondary`
 - Hover: translateY(-4px), border-color `--accent`, transition `--transition`
@@ -101,13 +101,13 @@ Créer dans `components/site/` + `styles/site/Home.module.css`:
 
 **About.tsx**
 - Section simple, centré, max-width 700px, margin auto
-- Titre h2 Comfortaa
+- Titre h2 Oxanium
 - Paragraphe Inter `--text-secondary`
 - Lien vers `/cv`: "Voir mon parcours complet →" en `--accent`
 
 **CallToAction.tsx**
 - Section pleine largeur, fond `--bg-secondary`
-- Titre h2 Comfortaa grand + sous-titre
+- Titre h2 Oxanium grand + sous-titre
 - Bouton large: filled `--accent`, padding généreux, border-radius `--radius`
 - Lien vers `/contact`
 
