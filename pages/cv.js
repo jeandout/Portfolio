@@ -2,13 +2,11 @@ import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-//On désactive le SSR avec dynamic(..., { ssr: false }) pour s’assurer que ni IDE ni MobileView ne soient rendus côté serveur.
+// SSR désactivé — composants client-only
 const IDE = dynamic(() => import('../components/IDE'), { ssr: false });
 const MobileView = dynamic(() => import('../components/MobileView'), { ssr: false });
 
-function Index() {
-  
-  // mounted empêche tout affichage avant que le composant ne soit monté (donc uniquement côté client).
+function CV() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -16,7 +14,11 @@ function Index() {
 
   if (!mounted) return null;
 
-  return isMobile ? <MobileView /> : <IDE />;
+  return (
+    <div className="ide-root">
+      {isMobile ? <MobileView /> : <IDE />}
+    </div>
+  );
 }
 
-export default Index;
+export default CV;

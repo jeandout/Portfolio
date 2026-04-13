@@ -1,38 +1,51 @@
 import '../styles/globals.css';
 import Head from 'next/head';
-import data from '../public/CV.json'; // Import data for SEO
-require('dotenv').config();
+import { useRouter } from 'next/router';
+import Layout from '../components/site/Layout';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeandoutrebente.vercel.app';
+const TITLE = 'Jean Doutrebente — Designer & Développeur';
+const DESCRIPTION = "Designer et développeur, j'accompagne les entreprises de l'identification du problème utilisateur jusqu'au prototype fonctionnel.";
+const KEYWORDS = 'UX, UI, design, développement, prototypage, freelance, Paris';
+
+// Routes qui ne doivent pas avoir le layout site (IDE legacy)
+const NO_LAYOUT_ROUTES = ['/cv'];
 
 function App({ Component, pageProps }) {
-  const { profil } = data;
-  const title = `${profil.user.firstname} ${profil.user.name} - ${profil.cvTitle}`;
-  const description = profil.resume;
-  const url = "https://jeandoutrebente.com"; // Placeholder URL
+  const router = useRouter();
+  const isNoLayout = NO_LAYOUT_ROUTES.includes(router.pathname);
 
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content="Développeur Full Stack, Web, Mobile, React, Node.js, Jean Doutrebente, Portfolio" />
-        <meta name="author" content={`${profil.user.firstname} ${profil.user.name}`} />
+        <title>{TITLE}</title>
+        <meta name="description" content={DESCRIPTION} />
+        <meta name="keywords" content={KEYWORDS} />
+        <meta name="author" content="Jean Doutrebente" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={url} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={`${url}/favicon.ico`} /> {/* Using favicon as placeholder image */}
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESCRIPTION} />
+        <meta property="og:image" content={`${SITE_URL}/favicon.ico`} />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={url} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={`${url}/favicon.ico`} />
+        <meta property="twitter:url" content={SITE_URL} />
+        <meta property="twitter:title" content={TITLE} />
+        <meta property="twitter:description" content={DESCRIPTION} />
+        <meta property="twitter:image" content={`${SITE_URL}/favicon.ico`} />
       </Head>
-      <Component {...pageProps} />
+
+      {isNoLayout ? (
+        <Component {...pageProps} />
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
     </>
   );
 }

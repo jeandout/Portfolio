@@ -1,90 +1,94 @@
-/* Reset des marges et paddings */
-* {
+/* ─── Design Tokens ─────────────────────────────────────── */
+@import './design-tokens.css';
+
+/* ─── Reset universel ───────────────────────────────────── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Reset des styles de texte */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li {
-  font-family: sans-serif;
-  list-style: none;
-  text-decoration: none;
-  color: rgb(201, 201, 201);
-}
-
-/* Suppression des bordures sur les boutons et inputs */
-button,
-input,
-textarea {
-  border: none;
-  outline: none;
-  background: none;
-}
-
+/* ─── Body — styles site par défaut ─────────────────────── */
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgb(31, 31, 31);
-  /* Fix white bar issue */
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   overflow-x: hidden;
-  /* Prevent horizontal scroll */
 }
 
-* {
-  box-sizing: border-box;
+/* Headings — reset simple, police héritée de body (Inter)   */
+/* Comfortaa appliqué via SiteLayout à l'étape 2             */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-h1 {
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; color: inherit; border: none; outline: none; background: none; }
+input, textarea { border: none; outline: none; background: none; }
+
+/* ─── Utilitaires site ──────────────────────────────────── */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+/* ─── Legacy IDE — scoped sous .ide-root ────────────────── */
+/* Réinitialise TOUT à l'identique de l'ancien globals.css   */
+.ide-root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgb(31, 31, 31);
+  color: rgb(201, 201, 201);
+  line-height: normal;
+  min-height: 100vh;
+}
+
+/* Réinitialise les héritages du body site sur tous les enfants IDE */
+.ide-root * {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/* Headings IDE — identiques à l'ancien globals.css */
+.ide-root h1 {
   font-size: 1rem;
-  margin: 0;
   text-transform: uppercase;
   font-weight: 200;
   color: white;
-
 }
 
-h2 {
+.ide-root h2 {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 600;
   color: white;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-h3 {
-  font-size: .7rem;
-  margin: 0;
+.ide-root h3 {
+  font-size: 0.7rem;
   text-transform: uppercase;
   font-weight: 800;
   color: white;
 }
 
-button {
+.ide-root button {
   cursor: pointer;
-  color: rgb(201, 201, 201);
 }
 
+/* ─── Legacy IDE — classes globales (identiques à avant) ── */
 .menuTitle {
-  /* width: 200px; */
   white-space: nowrap;
-  /* Empêche le retour à la ligne */
   overflow: hidden;
-  /* Cache le texte débordant */
   text-overflow: ellipsis;
-  /* Ajoute "..." */
 }
 
 .folderInNav {
@@ -108,11 +112,7 @@ button {
   border-left: solid 1px grey;
 }
 
-
-.selectedFile {
-  color: rgb(51, 118, 205);
-
-}
+.selectedFile { color: rgb(51, 118, 205); }
 
 .tab {
   display: flex;
@@ -137,9 +137,7 @@ button {
   background-color: rgb(31, 31, 31);
 }
 
-.selectedTextTab {
-  color: rgb(51, 118, 205);
-}
+.selectedTextTab { color: rgb(51, 118, 205); }
 
 .editorContent {
   display: flex;
@@ -162,28 +160,7 @@ button {
   text-align: left;
 }
 
-.resizer {
-  width: 6px;
-  z-index: 5;
-  cursor: ew-resize;
-  /* Curseur de redimensionnement */
-}
-
-.resizerH {
-  width: 100%;
-  height: 6px;
-  z-index: 5;
-  cursor: row-resize;
-  /* Curseur de redimensionnement */
-}
-
-.console {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-}
-
-.sendButton {
-  background-color: rgb(51, 118, 205);
-  padding: 10px;
-}
+.resizer { width: 6px; z-index: 5; cursor: ew-resize; }
+.resizerH { width: 100%; height: 6px; z-index: 5; cursor: row-resize; }
+.console { width: 100%; height: 100%; padding: 10px; }
+.sendButton { background-color: rgb(51, 118, 205); padding: 10px; }

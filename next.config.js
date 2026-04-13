@@ -4,7 +4,9 @@ const nextConfig = {
   images: {
     domains: [],
   },
-  
+  turbopack: {
+    root: process.cwd(),
+  },
 };
 
 module.exports = nextConfig;
