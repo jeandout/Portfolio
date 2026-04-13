@@ -21,73 +21,20 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
-}
-
-.contactForm {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 28px;
-  display: grid;
-  gap: 10px;
-}
-
-.formLabel {
-  color: var(--text-secondary);
-  font-size: var(--font-size-sm);
-}
-
-.formField {
-  min-height: 46px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  padding: 12px 14px;
-  font-family: var(--font-body);
-  transition: var(--transition);
-}
-
-.formField:focus {
-  border-color: var(--accent);
-  outline: none;
-}
-
-.formTextarea {
-  resize: vertical;
-  min-height: 180px;
-}
-
-.statusMessage {
-  margin-top: 6px;
-  font-size: var(--font-size-sm);
-}
-
-.statusSuccess {
-  color: #57c27f;
-}
-
-.statusError {
-  color: #ff7f7f;
-}
-
-.statusInfo {
-  color: var(--text-secondary);
-}
-
-.aside {
-  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
-.bookingCard,
-.infoCard {
+.contactCard {
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
 }
 
 .asideTitle {
@@ -95,16 +42,17 @@
   font-size: var(--font-size-xl);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  margin: 0;
 }
 
 .asideText {
-  margin-top: 12px;
+  margin: 0;
   color: var(--text-secondary);
 }
 
 .bookingButton {
-  margin-top: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -122,19 +70,9 @@
   color: #ffffff;
 }
 
-.separator {
-  border: 0;
-  border-top: 1px solid var(--border);
-}
-
-.infoLink {
-  display: inline-flex;
-  margin-top: 10px;
-  color: var(--accent);
-}
-
-.infoLink:hover {
-  color: var(--accent-hover);
+.cardAction {
+  margin-top: auto;
+  align-self: center;
 }
 
 @media (max-width: 940px) {
@@ -147,6 +85,6 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }

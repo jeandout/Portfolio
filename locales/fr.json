@@ -102,7 +102,13 @@
   },
   "contact": {
     "title": "Discutons de votre projet",
-    "subtitle": "Un formulaire, un café ou un appel : comme vous préférez.",
+    "subtitle": "Un appel ou un rendez-vous : comme vous preferez.",
+    "call": {
+      "title": "Un appel direct ?",
+      "description": "Appelez-moi directement pour un premier echange. Le numero n'est pas affiche en clair pour limiter le spam.",
+      "button": "M'appeler",
+      "phone": "+33632031786"
+    },
     "form": {
       "name": "Votre nom",
       "email": "Votre email",

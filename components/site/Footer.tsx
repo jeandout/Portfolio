@@ -29,7 +29,7 @@ export default function Footer() {
         </nav>
         <div className={styles.footerControls}>
           <ThemeToggle />
-          <Link href="/cv" className={styles.footerVersionLink}>
+          <Link href="/v1" className={styles.footerVersionLink}>
             V1
           </Link>
         </div>

@@ -1,0 +1,361 @@
+.page {
+  padding-top: 64px;
+}
+
+.wrapper {
+  display: grid;
+  gap: 88px;
+  justify-items: center;
+}
+
+.hero {
+  display: grid;
+  gap: 20px;
+  max-width: 920px;
+  justify-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  letter-spacing: -0.03em;
+}
+
+.role {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+}
+
+.lead {
+  max-width: 780px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  border-radius: 999px;
+  padding: 0 20px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: transform var(--transition), background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.primaryButton {
+  background: var(--accent);
+  color: #101010;
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.secondaryButton:hover {
+  border-color: var(--accent);
+}
+
+.sectionBlock {
+  display: grid;
+  gap: 28px;
+  width: 100%;
+  max-width: 980px;
+  justify-items: center;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.storyline {
+  display: grid;
+  gap: 26px;
+  width: 100%;
+  max-width: 980px;
+  padding: 8px 0;
+}
+
+.storyItem {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.storyLogoWrap {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  align-self: start;
+}
+
+.storyLogo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.storyCard {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  text-align: left;
+  min-height: clamp(180px, calc(170px + (var(--story-weight, 0.3) * 240px)), 440px);
+}
+
+.storyHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.storyHead span {
+  font-size: var(--font-size-sm);
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.storyCard h3 {
+  font-size: var(--font-size-lg);
+  line-height: 1.35;
+}
+
+.storyCard p {
+  color: var(--text-secondary);
+  line-height: 1.55;
+  text-align: left;
+}
+
+.contributionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.contributionCard {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  background: var(--bg-secondary);
+}
+
+.contributionCard h3 {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.contributionCard p {
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.themeList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.themeItem {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--bg-secondary);
+}
+
+.themeItem h3 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.themeItem p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.twoCols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+  max-width: 980px;
+}
+
+.simpleList {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+}
+
+.simpleList li {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--bg-secondary);
+  text-align: center;
+}
+
+.simpleList p {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.simpleList span {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tagList li {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.kpiCard {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  text-align: center;
+}
+
+.kpiValue {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.kpiLabel {
+  margin-top: 6px;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.bottomCta {
+  border-top: 1px solid var(--border);
+  padding-top: 36px;
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  max-width: 980px;
+  justify-items: center;
+  text-align: center;
+}
+
+.bottomCta p {
+  color: var(--text-secondary);
+}
+
+.legacyLink {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legacyLink:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 940px) {
+  .page {
+    padding-top: 28px;
+  }
+
+  .wrapper {
+    gap: 64px;
+  }
+
+  .contributionGrid,
+  .themeList,
+  .twoCols,
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .storyline {
+    gap: 18px;
+  }
+
+  .storyItem {
+    grid-template-columns: 56px 1fr;
+  }
+
+  .storyLogoWrap {
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  .storyLogo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .storyHead {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .storyHead span {
+    white-space: normal;
+  }
+
+  .storyCard {
+    min-height: clamp(180px, calc(160px + (var(--story-weight, 0.3) * 180px)), 340px);
+  }
+}

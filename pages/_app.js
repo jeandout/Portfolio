@@ -29,7 +29,15 @@ const PAGE_META = {
     description:
       "Parlons de votre projet via formulaire, email ou rendez-vous. Je reviens vers vous rapidement avec une proposition adaptee."
   },
-  '/cv': DEFAULT_META
+  '/cv': {
+    title: 'Parcours Product Engineer — Jean Doutrebente',
+    description:
+      "Découvrez mon parcours de Product Engineer : 7 ans d'expérience en design UX et gestion de projet, complétés par une expertise en développement web et mobile."
+  },
+  '/v1': {
+    title: 'CV interactif V1 — Jean Doutrebente',
+    description: "Version historique de mon CV interactif en interface IDE."
+  }
 };
 
 const THEME_STORAGE_KEY = 'site-theme';
@@ -82,6 +90,8 @@ function App({ Component, pageProps }) {
         <meta name="keywords" content={KEYWORDS} />
         <meta name="author" content="Jean Doutrebente" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/JD.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/JD.svg" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />

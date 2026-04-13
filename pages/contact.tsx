@@ -1,7 +1,8 @@
-import { HiOutlineCalendar } from 'react-icons/hi';
-import ContactForm from '../components/site/ContactForm';
+import { HiOutlineBriefcase, HiOutlineCalendar, HiOutlinePhone } from 'react-icons/hi';
 import texts from '../locales/fr.json';
 import styles from '../styles/site/Contact.module.css';
+
+const PHONE_NUMBER = '+33632031786';
 
 export default function ContactPage() {
   return (
@@ -13,39 +14,48 @@ export default function ContactPage() {
         </header>
 
         <section className={styles.grid}>
-          <ContactForm texts={texts.contact.form} />
+          <article className={styles.contactCard}>
+            <h2 className={styles.asideTitle}>
+              <HiOutlinePhone />
+              Un appel direct ?
+            </h2>
+            <p className={styles.asideText}>Appelez-moi directement pour un premier echange.</p>
+            <a className={`${styles.bookingButton} ${styles.cardAction}`} href={`tel:${PHONE_NUMBER}`}>
+              M&apos;appeler
+            </a>
+          </article>
 
-          <aside className={styles.aside}>
-            <article className={styles.bookingCard}>
-              <h2 className={styles.asideTitle}>
-                <HiOutlineCalendar />
-                {texts.contact.booking.title}
-              </h2>
-              <p className={styles.asideText}>{texts.contact.booking.description}</p>
-              <a
-                className={styles.bookingButton}
-                href={texts.contact.booking.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {texts.contact.booking.button}
-              </a>
-            </article>
+          <article className={styles.contactCard}>
+            <h2 className={styles.asideTitle}>
+              <HiOutlineCalendar />
+              {texts.contact.booking.title}
+            </h2>
+            <p className={styles.asideText}>{texts.contact.booking.description}</p>
+            <a
+              className={`${styles.bookingButton} ${styles.cardAction}`}
+              href={texts.contact.booking.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {texts.contact.booking.button}
+            </a>
+          </article>
 
-            <hr className={styles.separator} />
-
-            <article className={styles.infoCard}>
-              <h2 className={styles.asideTitle}>Contact direct</h2>
-              <a
-                className={styles.infoLink}
-                href={texts.contact.info.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-            </article>
-          </aside>
+          <article className={styles.contactCard}>
+            <h2 className={styles.asideTitle}>
+              <HiOutlineBriefcase />
+              Contact pro
+            </h2>
+            <p className={styles.asideText}>Retrouvez-moi aussi sur LinkedIn.</p>
+            <a
+              className={`${styles.bookingButton} ${styles.cardAction}`}
+              href={texts.contact.info.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </article>
         </section>
       </div>
     </div>

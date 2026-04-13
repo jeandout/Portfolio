@@ -30,11 +30,13 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <div className={`container ${styles.headerInner}`}>
         <Link href="/" className={styles.logo}>
-          Jean Doutrebente
+          <img src="/JD.svg" alt="" aria-hidden="true" className={styles.logoMark} />
+          <span className={styles.logoText}>Jean Doutrebente</span>
         </Link>
 
         {/* Nav desktop */}
         <nav className={styles.nav} aria-label="Navigation principale">
+          <Link href="/cv" className={styles.navLink}>Parcours</Link>
           <Link href="/accompagnement" className={styles.navLink}>Accompagnement</Link>
           <Link href="/contact" className={styles.navLink}>Contact</Link>
           <Button href="/contact">Parlons de votre projet</Button>
@@ -59,6 +61,9 @@ export default function Header() {
         aria-hidden={!menuOpen}
       >
         <nav className={styles.mobileNav} aria-label="Navigation mobile">
+          <Link href="/cv" className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
+            Parcours
+          </Link>
           <Link href="/accompagnement" className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
             Accompagnement
           </Link>

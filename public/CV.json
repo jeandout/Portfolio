@@ -149,9 +149,9 @@
                 "title": "Product Engineer",
                 "company": "Fareneit / Agence Facta",
                 "description": [
-                    "Création de produit et développement technique.",
-                    "Conception technique et UX/UI d'une plateforme média (projet en cours).",
-                    "Accompagnement technique, aide sur les outils métiers et optimisation des processus."
+                    "Depuis 2025, j'interviens comme Product Engineer pour transformer des intentions métier en produits clairs, utilisables et robustes.",
+                    "Sur ce site, je propose un accompagnement de bout en bout: cadrage produit, animation d'ateliers, conception UX/UI, architecture technique et développement.",
+                    "J'aide aussi mes clients à fiabiliser la livraison avec des méthodes de travail concrètes, l'amélioration des outils métiers et l'optimisation des processus."
                 ]
             },
             {
@@ -159,10 +159,10 @@
                 "title": "Designer UX - Chef de projet fonctionnel",
                 "company": "Dynames IT",
                 "description": [
-                    "Design UX/UI et conception: identification des besoins clients, animation d'ateliers de conception produit et réalisation des interfaces.",
-                    "Gestion de projet produit: supervision stratégique et opérationnelle, estimation de charge, rédaction des spécifications fonctionnelles et planification.",
-                    "Architecture et ingénierie: définition de l'architecture technique, choix des langages, développement en équipe et mise en production directe avec les clients.",
-                    "Intégration continue CI/CD et gestion des tests unitaires et fonctionnels."
+                    "Chez Dynames IT, j'ai occupé un rôle de designer et chef de projet fonctionnel, au contact direct des clients pour comprendre leurs besoins et animer les ateliers qui donnaient la direction produit.",
+                    "J'y ai conçu les parcours et les interfaces, tout en pilotant la feuille de route: estimation de charge, rédaction des spécifications fonctionnelles, coordination des équipes et planification des développements.",
+                    "Sur PRETORIO, plateforme SaaS dédiée aux avocats en droit social, j'ai suivi tout le cycle de vie du produit, de l'idéation jusqu'à la mise sur le marché.",
+                    "J'ai aussi contribué aux choix d'architecture, au développement en équipe Angular et à la mise en place d'une exécution solide avec CI/CD et tests unitaires et fonctionnels."
                 ],
                 "projects": [
                     "PRETORIO (Angular): plateforme SAAS dédiée aux avocats spécialisés en droit social, pilotée de l'idéation à la mise sur le marché."
@@ -173,9 +173,9 @@
                 "title": "Designer et développeur d’interface",
                 "company": "CEA Grenoble",
                 "description": [
-                    "Conception de l’expérience utilisateur d’une démonstrateur de pile à combustible réversible : écrans, vidéos, animations led.",
-                    "Conception du système : choix du hardware, configuration et installation sur le démonstrateur.",
-                    "Développement : Interface sous Processing, animation de leds sur Arduino."
+                    "Au CEA Grenoble, j'ai travaillé sur un démonstrateur de pile a combustible reversible, avec l'objectif de rendre un sujet technologique complexe lisible et tangible.",
+                    "J'ai imaginé l'expérience utilisateur dans son ensemble: écrans, vidéos et animations de LEDs pour raconter le fonctionnement du système de manière pédagogique.",
+                    "En parallèle, j'ai conçu la partie système (choix hardware, configuration, installation) et développé l'interface sous Processing ainsi que les animations sur Arduino."
                 ]
             }
         ]
