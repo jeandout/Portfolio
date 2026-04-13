@@ -102,10 +102,10 @@
   },
   "contact": {
     "title": "Discutons de votre projet",
-    "subtitle": "Un appel ou un rendez-vous : comme vous preferez.",
+    "subtitle": "Un appel ou un rendez-vous : comme vous préférez.",
     "call": {
       "title": "Un appel direct ?",
-      "description": "Appelez-moi directement pour un premier echange. Le numero n'est pas affiche en clair pour limiter le spam.",
+      "description": "Appelez-moi directement pour un premier échange. Le numéro n'est pas affiché en clair pour limiter le spam.",
       "button": "M'appeler",
       "phone": "+33632031786"
     },
@@ -115,7 +115,7 @@
       "message": "Votre message",
       "submit": "Envoyer",
       "success": "Message envoyé ! Je reviens vers vous rapidement.",
-      "error": "Une erreur est survenue. Reessayez ou contactez-moi directement."
+      "error": "Une erreur est survenue. Réessayez ou contactez-moi directement."
     },
     "booking": {
       "title": "Un rendez-vous ?",

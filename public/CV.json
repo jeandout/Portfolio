@@ -57,7 +57,7 @@
             "::.........................::+:;.......+;;;:::::::::+XX$:....;++;....................................",
             "::..........................:::;........;;+::::::;+x$X:.....:......:;:..............................."
         ],
-        "title": "🤵🏼‍♂️ profil",
+        "title": "🤵🏼‍♂️ Profil",
         "user": {
             "name": "Doutrebente",
             "firstname": "Jean"
@@ -76,7 +76,7 @@
         ]
     },
     "formations": {
-        "title": "🎓 formations",
+        "title": "🎓 Formations",
         "items": [
             {
                 "title": "Concepteur-développeur d'applications web et mobile",
@@ -93,7 +93,7 @@
         ]
     },
     "competences": {
-        "title": "🛠️ compétences",
+        "title": "🛠️ Compétences",
         "items": [
             {
                 "title": "Design UX/UI",
@@ -142,7 +142,7 @@
         ]
     },
     "experiences": {
-        "title": "💼 expériences",
+        "title": "💼 Expériences",
         "items": [
             {
                 "date": "Depuis 2025",
@@ -173,7 +173,7 @@
                 "title": "Designer et développeur d’interface",
                 "company": "CEA Grenoble",
                 "description": [
-                    "Au CEA Grenoble, j'ai travaillé sur un démonstrateur de pile a combustible reversible, avec l'objectif de rendre un sujet technologique complexe lisible et tangible.",
+                    "Au CEA Grenoble, j'ai travaillé sur un démonstrateur de pile à combustible réversible, avec l'objectif de rendre un sujet technologique complexe lisible et tangible.",
                     "J'ai imaginé l'expérience utilisateur dans son ensemble: écrans, vidéos et animations de LEDs pour raconter le fonctionnement du système de manière pédagogique.",
                     "En parallèle, j'ai conçu la partie système (choix hardware, configuration, installation) et développé l'interface sous Processing ainsi que les animations sur Arduino."
                 ]
@@ -181,7 +181,7 @@
         ]
     },
     "otherExperiences": {
-        "title": "👷🏼‍♂️ autres expériences",
+        "title": "👷🏼‍♂️ Autres expériences",
         "items": [
             {
                 "date": "Juin - Août 2014",
@@ -198,7 +198,7 @@
         ]
     },
     "interest": {
-        "title": "🔎 intérêts",
+        "title": "🔎 Intérêts",
         "items": [
             "Nouvelles technologies (informatique, hifi, vidéo, photo, domotique)",
             "Mécanique (Moto)",
