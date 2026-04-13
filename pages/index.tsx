@@ -10,8 +10,8 @@ export default function Home() {
     <>
       <Hero texts={texts.hero} />
       <Services texts={texts.services} />
-      <ProcessTeaser texts={texts.process_teaser} />
       <About texts={texts.about} />
+      <ProcessTeaser texts={texts.process_teaser} />
       <CallToAction texts={texts.cta_final} />
     </>
   );

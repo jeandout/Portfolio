@@ -75,7 +75,7 @@ export default function ProcessTeaser({ texts }: ProcessTeaserProps) {
             ))}
           </div>
         </div>
-        <Link href="/accompagnement" className={styles.inlineLink} data-process-link>
+        <Link href="/accompagnement" className={`${styles.inlineLink} ${styles.processCta}`} data-process-link>
           {texts.cta} →
         </Link>
       </div>

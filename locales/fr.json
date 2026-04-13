@@ -2,58 +2,59 @@
   "site": {
     "name": "Jean Doutrebente",
     "title": "Designer & Développeur",
-    "tagline": "Je simplifie la vie de vos utilisateurs."
+    "tagline": "J'imagine et je développe des produits digitaux utiles, de l'idée à la mise en ligne."
   },
   "hero": {
-    "title": "Jean Doutrebente",
-    "subtitle": "Je simplifie la vie de vos utilisateurs.",
-    "description": "Designer et développeur, j'accompagne les entreprises de l'identification du problème utilisateur jusqu'au prototype fonctionnel. Une approche pragmatique, centrée sur vos utilisateurs.",
-    "cta_primary": "Parlons de votre projet",
-    "cta_secondary": "Comment je travaille"
+    "title": "Je transforme vos idées en solutions numériques concrètes",
+    "subtitle": "J'analyse vos besoins, j'identifie les blocages et je construis des solutions numériques adaptées à votre réalité.",
+    "description": "Grâce à ma connaissance du numérique, je conçois des solutions qui simplifient le quotidien et répondent à des problématiques concrètes, métier ou personnelles. J'accompagne les indépendants, TPE et PME du cadrage à la mise en ligne, avec un seul interlocuteur.",
+    "cta_primary": "Démarrer un projet",
+    "cta_secondary": "Voir mon accompagnement"
   },
   "services": {
     "title": "Ce que je fais",
     "items": [
       {
         "title": "Comprendre",
-        "description": "Audit UX, recherche utilisateur, entretiens. J'identifie les vrais problèmes avant de chercher des solutions.",
+        "description": "Ateliers, audit UX, recherche utilisateur. J'identifie les enjeux business, les points de blocage et les besoins réels avant de produire.",
         "icon": "search"
       },
       {
         "title": "Concevoir",
-        "description": "Wireframes, architecture fonctionnelle, prototypes. Je structure l'expérience pour qu'elle soit claire et efficace.",
+        "description": "Parcours, architecture, wireframes et UI. Je rends l'expérience claire, cohérente et alignée avec vos objectifs.",
         "icon": "pencil"
       },
       {
         "title": "Développer",
-        "description": "Prototypes fonctionnels, applications web et mobile. Je code ce que je conçois — pas de perte en traduction.",
+        "description": "Sites et applications web sur-mesure. Je code ce que je conçois : moins de friction, plus de qualité, plus de rapidité.",
         "icon": "code"
       }
     ],
-    "note": "Je peux aussi vous orienter vers des solutions existantes si elles répondent mieux à votre besoin."
+    "note": "Mon objectif est simple : trouver la solution la plus pertinente pour votre problème, qu'il s'agisse d'un outil existant ou d'un développement sur-mesure."
   },
   "process_teaser": {
-    "title": "Un projet, étape par étape",
+    "title": "Un accompagnement de A à Z",
     "steps": [
-      "Échange",
-      "Problématique",
+      "Cadrage",
+      "Stratégie",
       "Recherche",
-      "Benchmark",
-      "Solutions",
-      "Wireframes",
-      "Prototype",
-      "Livraison"
+      "Conception",
+      "Prototypage",
+      "Développement",
+      "Tests",
+      "Mise en ligne",
+      "Amélioration continue"
     ],
-    "cta": "Voir le détail de mon accompagnement"
+    "cta": "Découvrir la méthode complète"
   },
   "about": {
-    "title": "Qui suis-je",
-    "text": "7 ans d'expérience en design UX et gestion de projet, complétés par une formation intensive en développement web et mobile. Mon profil hybride me permet de penser un produit de bout en bout : de la compréhension du besoin utilisateur jusqu'à sa mise en production.",
+    "title": "Pourquoi travailler avec moi",
+    "text": "Diplômé en design d'interaction, je m'appuie sur 7 ans d'expérience en design UX et gestion de projet, complétés par une formation intensive en développement web et mobile. Ce profil hybride me permet de faire le lien entre vision, exécution et contraintes techniques, sans perte d'information entre les étapes.",
     "cta": "Voir mon parcours complet"
   },
   "cta_final": {
-    "title": "Un projet ? Une idée ?",
-    "subtitle": "Discutons-en.",
+    "title": "Vous avez un projet digital à lancer ou à faire évoluer ?",
+    "subtitle": "Parlons de vos objectifs, de vos priorités et des prochaines étapes.",
     "button": "Me contacter"
   },
   "accompagnement": {
@@ -97,22 +98,22 @@
         "description": "Tests utilisateur, ajustements, mise en production par blocs fonctionnels. On avance de manière pragmatique."
       }
     ],
-    "cta": "Prêt à démarrer ?"
+    "cta": "Prêt à démarrer ?"
   },
   "contact": {
     "title": "Discutons de votre projet",
-    "subtitle": "Un formulaire, un cafe, un appel - comme vous preferez.",
+    "subtitle": "Un formulaire, un café ou un appel : comme vous préférez.",
     "form": {
       "name": "Votre nom",
       "email": "Votre email",
       "message": "Votre message",
       "submit": "Envoyer",
-      "success": "Message envoye ! Je reviens vers vous rapidement.",
+      "success": "Message envoyé ! Je reviens vers vous rapidement.",
       "error": "Une erreur est survenue. Reessayez ou contactez-moi directement."
     },
     "booking": {
-      "title": "Un rendez-vous ?",
-      "description": "Reservez un creneau de 30 minutes pour discuter de votre projet.",
+      "title": "Un rendez-vous ?",
+      "description": "Réservez un créneau de 30 minutes pour discuter de votre projet.",
       "button": "Prendre rendez-vous",
       "url": "https://calendar.app.google/dCKbTzLquza371pW8"
     },
