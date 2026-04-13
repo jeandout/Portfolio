@@ -1,7 +1,10 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useCallback, useEffect, useState } from 'react';
 import Layout from '../components/site/Layout';
+import CVDesktopPopup from '../components/site/CVDesktopPopup';
+import { CVPopupContext } from '../components/site/CVPopupContext';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeandoutrebente.vercel.app';
 const KEYWORDS = 'UX, UI, design, développement, prototypage, freelance, Paris';
@@ -30,14 +33,43 @@ const PAGE_META = {
   '/cv': DEFAULT_META
 };
 
-// Routes qui ne doivent pas avoir le layout site (IDE legacy)
-const NO_LAYOUT_ROUTES = ['/cv'];
+const DESKTOP_BREAKPOINT = 940;
 
 function App({ Component, pageProps }) {
   const router = useRouter();
-  const isNoLayout = NO_LAYOUT_ROUTES.includes(router.pathname);
   const meta = PAGE_META[router.pathname] ?? DEFAULT_META;
   const pageUrl = `${SITE_URL}${router.pathname === '/' ? '' : router.pathname}`;
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isCvPopupOpen, setIsCvPopupOpen] = useState(false);
+
+  const openCvPopup = useCallback(() => setIsCvPopupOpen(true), []);
+  const closeCvPopup = useCallback(() => setIsCvPopupOpen(false), []);
+
+  useEffect(() => {
+    const updateViewport = () => {
+      const desktop = window.innerWidth > DESKTOP_BREAKPOINT;
+      setIsDesktop(desktop);
+
+      if (!desktop) {
+        setIsCvPopupOpen(false);
+      }
+    };
+
+    updateViewport();
+    window.addEventListener('resize', updateViewport);
+    return () => window.removeEventListener('resize', updateViewport);
+  }, []);
+
+  useEffect(() => {
+    setIsCvPopupOpen(false);
+  }, [router.pathname]);
+
+  const cvPopupContextValue = {
+    isDesktop,
+    isCvPopupOpen,
+    openCvPopup,
+    closeCvPopup
+  };
 
   return (
     <>
@@ -63,13 +95,12 @@ function App({ Component, pageProps }) {
         <meta property="twitter:image" content={`${SITE_URL}/favicon.ico`} />
       </Head>
 
-      {isNoLayout ? (
-        <Component {...pageProps} />
-      ) : (
+      <CVPopupContext.Provider value={cvPopupContextValue}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      )}
+        {isDesktop ? <CVDesktopPopup isOpen={isCvPopupOpen} onClose={closeCvPopup} /> : null}
+      </CVPopupContext.Provider>
     </>
   );
 }

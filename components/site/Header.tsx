@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type MouseEvent } from 'react';
 import Link from 'next/link';
 import styles from '../../styles/site/Layout.module.css';
+import { useCVPopup } from './CVPopupContext';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isDesktop, openCvPopup } = useCVPopup();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -25,6 +27,12 @@ export default function Header() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
+  const handleDesktopCVClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!isDesktop) return;
+    event.preventDefault();
+    openCvPopup();
+  };
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <div className={`container ${styles.headerInner}`}>
@@ -36,7 +44,7 @@ export default function Header() {
         <nav className={styles.nav} aria-label="Navigation principale">
           <Link href="/accompagnement" className={styles.navLink}>Accompagnement</Link>
           <Link href="/contact" className={styles.navLink}>Contact</Link>
-          <Link href="/cv" className={styles.navLink}>CV</Link>
+          <Link href="/cv" className={styles.navLink} onClick={handleDesktopCVClick}>CV</Link>
           <Link href="/contact" className={styles.ctaBtn}>
             Parlons de votre projet
           </Link>

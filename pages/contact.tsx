@@ -13,7 +13,7 @@ export default function ContactPage() {
         </header>
 
         <section className={styles.grid}>
-          <ContactForm texts={texts.contact.form} fallbackEmail={texts.contact.info.email} />
+          <ContactForm texts={texts.contact.form} />
 
           <aside className={styles.aside}>
             <article className={styles.bookingCard}>
@@ -36,9 +36,6 @@ export default function ContactPage() {
 
             <article className={styles.infoCard}>
               <h2 className={styles.asideTitle}>Contact direct</h2>
-              <a className={styles.infoLink} href={`mailto:${texts.contact.info.email}`}>
-                {texts.contact.info.email}
-              </a>
               <a
                 className={styles.infoLink}
                 href={texts.contact.info.linkedin}

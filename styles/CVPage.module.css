@@ -1,0 +1,60 @@
+.page {
+  min-height: 100vh;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(80, 80, 80, 0.25), transparent 38%),
+    radial-gradient(circle at 90% 15%, rgba(100, 100, 100, 0.2), transparent 35%),
+    #101010;
+}
+
+.desktopMockup {
+  width: min(1500px, 100%);
+  margin: 0 auto;
+  border: 1px solid #3a3a3a;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #1a1a1a;
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+.windowBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 14px;
+  background: linear-gradient(180deg, #2e2e2e 0%, #252525 100%);
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.windowDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35) inset;
+}
+
+.dotRed {
+  background: #ff5f57;
+}
+
+.dotYellow {
+  background: #febc2e;
+}
+
+.dotGreen {
+  background: #28c840;
+}
+
+.windowContent :global(.ide-root) {
+  min-height: calc(100vh - 100px);
+}
+
+@media (max-width: 940px) {
+  .page {
+    padding: 0;
+    background: transparent;
+  }
+}

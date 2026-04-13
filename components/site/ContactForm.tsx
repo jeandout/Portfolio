@@ -12,14 +12,13 @@ interface ContactFormTexts {
 
 interface ContactFormProps {
   texts: ContactFormTexts;
-  fallbackEmail: string;
 }
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-export default function ContactForm({ texts, fallbackEmail }: ContactFormProps) {
+export default function ContactForm({ texts }: ContactFormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -37,12 +36,12 @@ export default function ContactForm({ texts, fallbackEmail }: ContactFormProps) 
     if (!API_URL) {
       return {
         kind: 'info',
-        text: `API indisponible. Contact direct: ${fallbackEmail}`
+        text: 'API indisponible. Reessayez plus tard.'
       };
     }
 
     return null;
-  }, [fallbackEmail, status, texts.error, texts.success]);
+  }, [status, texts.error, texts.success]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

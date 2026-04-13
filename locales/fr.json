@@ -111,13 +111,12 @@
       "error": "Une erreur est survenue. Reessayez ou contactez-moi directement."
     },
     "booking": {
-      "title": "Preferez un rendez-vous ?",
+      "title": "Un rendez-vous ?",
       "description": "Reservez un creneau de 30 minutes pour discuter de votre projet.",
       "button": "Prendre rendez-vous",
       "url": "https://calendar.app.google/dCKbTzLquza371pW8"
     },
     "info": {
-      "email": "jeandout@hotmail.fr",
       "linkedin": "https://www.linkedin.com/in/jean-doutrebente-732884203/"
     }
   },

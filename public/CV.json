@@ -62,18 +62,17 @@
             "name": "Doutrebente",
             "firstname": "Jean"
         },
-        "cvTitle": "Développeur Full Stack Web et applications",
+        "cvTitle": "Product Engineer",
         "contact": {
-            "email": "jeandout@hotmail.fr",
             "phone": "+33 6 32 03 17 86",
-            "adress": "Paris"
+            "adress": "Paris",
+            "email": "jeandout@hotmail.fr",
+            "github": "github.com/jeandout"
         },
         "resume": [
-            "Développeur Fullstack / Frontend disponible à Paris et ses environs. ",
-            "Après 7 ans d’expérience en gestion de projet et conception d’interfaces utilisateur, j’ai choisi de me spécialiser dans le développement web et mobile. ",
-            "Diplômé du titre professionnel de Développeur d’application web et mobile (formation intensive à La Capsule), je suis aujourd’hui opérationnel sur des technologies modernes telles que React, Node.js et JavaScript. ",
-            "Mon parcours en UX/UI et en gestion de projet me donne une approche unique : je conçois des solutions qui sont à la fois techniquement solides et centrées sur l’utilisateur. ",
-            "🔎 Je suis actuellement à la recherche d’un nouveau défi en tant que Développeur Fullstack ou Frontend à Paris, et je serais ravi d’échanger avec vous sur de potentielles opportunités ! "
+            "Après un diplôme de designer d'interaction et 7 années d'expérience en tant que designer et chef de projet, j'ai confirmé mes compétences par une certification en développement d'applications web et mobile.",
+            "Mon profil de Product Engineer me permet d'intervenir sur l'ensemble de la chaîne de valeur d'un projet: de l'identification des besoins et du design UX/UI, jusqu'à l'implémentation technique et l'architecture.",
+            "Mon approche globale et pragmatique me permet de maîtriser toutes les étapes de conception et de développement afin de livrer un produit fini, de la première idée jusqu'à la mise en production, en conformité avec les objectifs business."
         ]
     },
     "formations": {
@@ -97,29 +96,47 @@
         "title": "🛠️ compétences",
         "items": [
             {
-                "title": "design",
+                "title": "Design UX/UI",
                 "skills": [
                     "Figma / Adobe XD",
-                    "Photoshop / Illustrator / Indesign / After Effects / Premiere Pro",
-                    "Processing / Arduino",
-                    "SolidWorks / 2dsMax / Keyshot"
+                    "Suite Adobe (Ai, Ps, Pr, Ae)",
+                    "Prototypage",
+                    "Définition de l'expérience utilisateur"
                 ]
             },
             {
-                "title": "développement",
+                "title": "Ingénierie & développement",
                 "skills": [
-                    "HTML 5 / CSS / JavaScript",
-                    "React / Redux / NextJS",
+                    "JavaScript / React / Redux / NextJS",
                     "NodeJS / Express",
                     "MongoDB / Mongoose",
                     "React Native",
-                    "Vercel / Git / Github / TDD"
+                    "HTML5 / CSS"
                 ]
             },
             {
-                "title": "gestion de projet",
+                "title": "Infrastructure & qualité",
                 "skills": [
-                    "Planio / Redmine / Trello"
+                    "Intégration des tests automatisés CI/CD",
+                    "TDD",
+                    "Git / Github / Vercel"
+                ]
+            },
+            {
+                "title": "Produit & gestion",
+                "skills": [
+                    "Méthodologies agiles",
+                    "Ateliers de conception produit",
+                    "Estimation de charge",
+                    "Rédaction des spécifications fonctionnelles",
+                    "Planio / Trello / Redmine / Azure DevOps"
+                ]
+            },
+            {
+                "title": "Outils IA",
+                "skills": [
+                    "Création d'agents",
+                    "MCP"
                 ]
             }
         ]
@@ -128,22 +145,27 @@
         "title": "💼 expériences",
         "items": [
             {
+                "date": "Depuis 2025",
+                "title": "Product Engineer",
+                "company": "Fareneit / Agence Facta",
+                "description": [
+                    "Création de produit et développement technique.",
+                    "Conception technique et UX/UI d'une plateforme média (projet en cours).",
+                    "Accompagnement technique, aide sur les outils métiers et optimisation des processus."
+                ]
+            },
+            {
                 "date": "2017 - 2024",
                 "title": "Designer UX - Chef de projet fonctionnel",
                 "company": "Dynames IT",
                 "description": [
-                    "Supervision de l'ensemble des fonctions de gestion de projet et de design UX/UI (planification, conception, développement et livraison).",
-                    "Développement en équipe. Choix des architectures techniques, des langages et des modes de développement adaptés aux projets.",
-                    "Gestion des tests unitaires. Gestion des tests fonctionnels et des processus de validation demandés.",
-                    "Intégration des tests automatisés CI/CD selon les chaînes d'intégration mises en place pour les différents projets clients.",
-                    "Capacité forte à discuter directement avec les clients pour les phases de finalisation et de mise en production.",
-                    "Coordination avec les chefs de projet pour prise en compte des besoins et planification des développements.",
-                    "Synthèse et suivi des avancements, respect des charge"
+                    "Design UX/UI et conception: identification des besoins clients, animation d'ateliers de conception produit et réalisation des interfaces.",
+                    "Gestion de projet produit: supervision stratégique et opérationnelle, estimation de charge, rédaction des spécifications fonctionnelles et planification.",
+                    "Architecture et ingénierie: définition de l'architecture technique, choix des langages, développement en équipe et mise en production directe avec les clients.",
+                    "Intégration continue CI/CD et gestion des tests unitaires et fonctionnels."
                 ],
                 "projects": [
-                    "PRETORIO (Angular) : Plateforme SAAS dédiée aux avocats spécialisés en droit social.",
-                    "CASHLEE (Ionic) : Solution de paiement numérique optimisée pour le secteur médical.",
-                    "COMMINES (Ionic) : Application mobile facilitant l'expérience utilisateur dans le domaine du voyage."
+                    "PRETORIO (Angular): plateforme SAAS dédiée aux avocats spécialisés en droit social, pilotée de l'idéation à la mise sur le marché."
                 ]
             },
             {
@@ -178,10 +200,9 @@
     "interest": {
         "title": "🔎 intérêts",
         "items": [
-            "Nouvelles technologies (Informatique, Hifi, Vidéo, Photo,  Domotique)",
+            "Nouvelles technologies (informatique, hifi, vidéo, photo, domotique)",
             "Mécanique (Moto)",
-            "Œnologie",
-            "Musique (piano, chant)"
+            "Œnologie, cuisine"
         ]
     }
 }

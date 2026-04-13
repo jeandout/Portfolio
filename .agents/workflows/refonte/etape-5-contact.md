@@ -26,7 +26,6 @@ Ajouter dans `locales/fr.json` (clé `contact`):
     "button": "Prendre rendez-vous"
   },
   "info": {
-    "email": "jeandout@hotmail.fr",
     "linkedin": "https://www.linkedin.com/in/jean-doutrebente-732884203/"
   }
 }
