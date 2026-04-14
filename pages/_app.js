@@ -7,6 +7,7 @@ import { ThemeContext } from '../components/site/ThemeContext';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://jeandoutrebente.vercel.app';
 const KEYWORDS = 'UX, UI, design, développement, prototypage, freelance, Paris';
+const OG_IMAGE_PATH = '/og-image.svg';
 const DEFAULT_META = {
   title: 'Jean Doutrebente — Designer & Développeur',
   description:
@@ -57,6 +58,7 @@ function App({ Component, pageProps }) {
   const router = useRouter();
   const meta = PAGE_META[router.pathname] ?? DEFAULT_META;
   const pageUrl = `${SITE_URL}${router.pathname === '/' ? '' : router.pathname}`;
+  const isLegacyPage = router.pathname === '/v1';
   const [theme, setTheme] = useState('dark');
   const [isThemeReady, setIsThemeReady] = useState(false);
 
@@ -90,6 +92,8 @@ function App({ Component, pageProps }) {
         <meta name="keywords" content={KEYWORDS} />
         <meta name="author" content="Jean Doutrebente" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href={pageUrl} />
+        {isLegacyPage ? <meta name="robots" content="noindex, nofollow" /> : <meta name="robots" content="index, follow" />}
         <link rel="icon" href="/JD.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/JD.svg" />
 
@@ -98,14 +102,17 @@ function App({ Component, pageProps }) {
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:image" content={`${SITE_URL}/favicon.ico`} />
+        <meta property="og:image" content={`${SITE_URL}${OG_IMAGE_PATH}`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Jean Doutrebente - Designer et Developpeur" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={pageUrl} />
         <meta property="twitter:title" content={meta.title} />
         <meta property="twitter:description" content={meta.description} />
-        <meta property="twitter:image" content={`${SITE_URL}/favicon.ico`} />
+        <meta property="twitter:image" content={`${SITE_URL}${OG_IMAGE_PATH}`} />
       </Head>
 
       <ThemeContext.Provider value={themeContextValue}>
