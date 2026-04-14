@@ -37,7 +37,7 @@ export default function ContactForm({ texts }: ContactFormProps) {
     if (!API_URL) {
       return {
         kind: 'info',
-        text: 'API indisponible. Reessayez plus tard.'
+        text: 'API indisponible. Réessayez plus tard.'
       };
     }
 

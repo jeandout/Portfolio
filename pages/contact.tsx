@@ -19,7 +19,7 @@ export default function ContactPage() {
               <HiOutlinePhone />
               Un appel direct ?
             </h2>
-            <p className={styles.asideText}>Appelez-moi directement pour un premier echange.</p>
+            <p className={styles.asideText}>Appelez-moi directement pour un premier &eacute;change.</p>
             <a className={`${styles.bookingButton} ${styles.cardAction}`} href={`tel:${PHONE_NUMBER}`}>
               M&apos;appeler
             </a>

@@ -22,15 +22,15 @@ const PAGE_META = {
   '/accompagnement': {
     title: 'Comment je travaille — Jean Doutrebente',
     description:
-      "Decouvrez mon accompagnement: de l'echange initial au prototypage fonctionnel, avec une approche pragmatique et centree utilisateurs."
+      "Découvrez mon accompagnement : de l'échange initial au prototypage fonctionnel, avec une approche pragmatique et centrée utilisateurs."
   },
   '/contact': {
     title: 'Contact — Jean Doutrebente',
     description:
-      "Parlons de votre projet via formulaire, email ou rendez-vous. Je reviens vers vous rapidement avec une proposition adaptee."
+      "Parlons de votre projet via formulaire, email ou rendez-vous. Je reviens vers vous rapidement avec une proposition adaptée."
   },
   '/cv': {
-    title: 'Parcours Product Engineer — Jean Doutrebente',
+    title: 'Expérience et expertise produit — Jean Doutrebente',
     description:
       "Découvrez mon parcours de Product Engineer : 7 ans d'expérience en design UX et gestion de projet, complétés par une expertise en développement web et mobile."
   },

@@ -220,6 +220,13 @@
   max-width: 980px;
 }
 
+.centeredRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+}
+
 .simpleList {
   display: grid;
   gap: 14px;

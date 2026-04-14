@@ -36,8 +36,8 @@ export default function Header() {
 
         {/* Nav desktop */}
         <nav className={styles.nav} aria-label="Navigation principale">
-          <Link href="/cv" className={styles.navLink}>Parcours</Link>
           <Link href="/accompagnement" className={styles.navLink}>Accompagnement</Link>
+          <Link href="/cv" className={styles.navLink}>Parcours</Link>
           <Link href="/contact" className={styles.navLink}>Contact</Link>
           <Button href="/contact">Parlons de votre projet</Button>
         </nav>
@@ -61,11 +61,11 @@ export default function Header() {
         aria-hidden={!menuOpen}
       >
         <nav className={styles.mobileNav} aria-label="Navigation mobile">
-          <Link href="/cv" className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
-            Parcours
-          </Link>
           <Link href="/accompagnement" className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
             Accompagnement
+          </Link>
+          <Link href="/cv" className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
+            Parcours
           </Link>
           <Link href="/contact" className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
             Contact
