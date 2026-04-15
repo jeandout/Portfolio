@@ -111,9 +111,6 @@ export default function CvStory({ cvData }) {
             <Link href="/contact" className={styles.primaryButton}>
               Me contacter
             </Link>
-            <Link href="/v1" className={styles.legacyLink}>
-              Voir la V1
-            </Link>
           </div>
         </footer>
       </div>
