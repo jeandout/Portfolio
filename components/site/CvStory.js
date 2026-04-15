@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '../../styles/site/CvStory.module.css';
 
-const PDF_PATH = '/CV%20-%20Jean%20Doutrebente%20-%20PE.pdf';
+const PDF_PATH = '/CV%20-%20Jean%20Doutrebente.pdf';
 
 const cleanTitle = (value = '') => value.replace(/[^\p{L}\p{N}\s&/-]/gu, '').trim();
 
