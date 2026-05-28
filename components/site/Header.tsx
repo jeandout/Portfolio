@@ -62,7 +62,7 @@ export default function Header() {
       <div
         className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}
         aria-hidden={!menuOpen}
-        {...(!menuOpen ? { inert: '' } : {})}
+        {...(!menuOpen ? { inert: true } : {})}
       >
         <nav className={styles.mobileNav} aria-label="Navigation mobile">
           <Link href="/accompagnement" className={styles.mobileNavLink} onClick={() => setMenuOpen(false)}>
