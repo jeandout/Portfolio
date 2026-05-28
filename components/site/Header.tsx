@@ -30,7 +30,10 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <div className={`container ${styles.headerInner}`}>
         <Link href="/" className={styles.logo}>
-          <img src="/JD.svg" alt="" aria-hidden="true" className={styles.logoMark} />
+          <svg width="71" height="68" viewBox="0 0 71 68" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.logoMark} aria-hidden="true">
+            <path d="M3.8147e-06 51.3519V39.5439H11.712V52.2159C11.712 54.9679 13.12 56.3439 15.936 56.3439H23.1C25.916 56.3439 27.324 54.9679 27.324 52.2159V16.4999H39.036V51.3519V66.9999H23.388H15.648C5.216 66.9999 3.8147e-06 61.7839 3.8147e-06 51.3519Z" fill="#6B8AAD"/>
+            <path d="M55.288 67.1479L43.48 67.1479L43.48 55.4359L56.152 55.4359C58.904 55.4359 60.28 54.0279 60.28 51.2119L60.28 15.936C60.28 13.12 58.904 11.712 56.152 11.712L12.936 11.712L12.936 2.53526e-06L55.288 6.83996e-07L70.936 0L70.936 15.648L70.936 51.4999C70.936 61.9319 65.72 67.1479 55.288 67.1479Z" fill="currentColor"/>
+          </svg>
           <span className={styles.logoText}>Jean Doutrebente</span>
         </Link>
 

@@ -15,6 +15,9 @@ interface BaseButtonProps {
 
 type LinkButtonProps = BaseButtonProps & {
   href: string;
+  download?: boolean | string;
+  target?: string;
+  rel?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
@@ -49,12 +52,22 @@ export default function Button(props: ButtonProps) {
   const buttonClassName = getButtonClassName(className, variant, size, fullWidth);
 
   if ('href' in props) {
-    const { href, onClick } = restProps as {
+    const { href, download, target, rel, onClick } = restProps as {
       href: string;
+      download?: boolean | string;
+      target?: string;
+      rel?: string;
       onClick?: MouseEventHandler<HTMLAnchorElement>;
     };
+    if (download !== undefined) {
+      return (
+        <a href={href} className={buttonClassName} download={download} target={target} rel={rel} onClick={onClick}>
+          {children}
+        </a>
+      );
+    }
     return (
-      <Link href={href} className={buttonClassName} onClick={onClick}>
+      <Link href={href} className={buttonClassName} target={target} rel={rel} onClick={onClick}>
         {children}
       </Link>
     );

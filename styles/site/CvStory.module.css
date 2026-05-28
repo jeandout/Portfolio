@@ -44,41 +44,12 @@
 .heroActions {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 8px;
 }
 
-.primaryButton,
-.secondaryButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  border-radius: 999px;
-  padding: 0 20px;
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  transition: transform var(--transition), background-color var(--transition), color var(--transition), border-color var(--transition);
-}
-
-.primaryButton {
-  background: var(--accent);
-  color: #101010;
-}
-
-.primaryButton:hover {
-  transform: translateY(-1px);
-}
-
-.secondaryButton {
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-}
-
-.secondaryButton:hover {
-  border-color: var(--accent);
-}
 
 .sectionBlock {
   display: grid;

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Button from './Button';
 import styles from '../../styles/site/CvStory.module.css';
 
 const PDF_PATH = '/CV%20-%20Jean%20Doutrebente.pdf';
@@ -32,12 +32,12 @@ export default function CvStory({ cvData }) {
             dans une m&ecirc;me dynamique.
           </p>
           <div className={styles.heroActions}>
-            <Link href="/contact" className={styles.primaryButton}>
+            <Button href="/contact">
               Discuter de votre projet
-            </Link>
-            <a href={PDF_PATH} className={styles.secondaryButton} download>
+            </Button>
+            <Button href={PDF_PATH} variant="secondary" download>
               T&eacute;l&eacute;charger le CV PDF
-            </a>
+            </Button>
           </div>
         </header>
 
@@ -108,9 +108,9 @@ export default function CvStory({ cvData }) {
         <footer className={styles.bottomCta}>
           <p>Si votre projet a besoin d&apos;un profil qui relie strat&eacute;gie, UX et ex&eacute;cution technique, parlons-en.</p>
           <div className={styles.heroActions}>
-            <Link href="/contact" className={styles.primaryButton}>
+            <Button href="/contact">
               Me contacter
-            </Link>
+            </Button>
           </div>
         </footer>
       </div>

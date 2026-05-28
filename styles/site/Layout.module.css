@@ -51,9 +51,6 @@
   flex-shrink: 0;
 }
 
-:global([data-theme='light']) .logoMark {
-  filter: invert(1);
-}
 
 .logoText {
   line-height: 1;
